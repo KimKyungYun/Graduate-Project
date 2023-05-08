@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859d808f55b6ce74584243aec57ef439, type: 3}
+  m_Name: ExtrusionAssetResources
+  m_EditorClassIdentifier: 
+  twentyByTwentyDescriptors:
+  - prefab: {fileID: 4597986650499717518, guid: b213d04a5d095ce4b881c270fb8ca9da,
+      type: 3}
+    Icon: {fileID: 21300000, guid: df3cef186decf7443bfe5ceaadf67836, type: 3}
+    defaultSize: 1
+    allowCustomSize: 1
+    allowRotateQuarter: 0
+    allowRotateHalf: 0
+    allowFlip: 0
+  - prefab: {fileID: 8183266833640307841, guid: c870b5f20242ba844aea9379d215a3d7,
+      type: 3}
+    Icon: {fileID: 21300000, guid: 2cb25e600bcae1845b81949cb3b6765c, type: 3}
+    defaultSize: 2
+    allowCustomSize: 0
+    allowRotateQuarter: 1
+    allowRotateHalf: 1
+    allowFlip: 1
+  - prefab: {fileID: 1033225792524879111, guid: f40f4b5acdcefa44ababc1e235840be5,
+      type: 3}
+    Icon: {fileID: 21300000, guid: 8b374d3a3a26efb4eb4a06271eb79e73, type: 3}
+    defaultSize: 2
+    allowCustomSize: 0
+    allowRotateQuarter: 1
+    allowRotateHalf: 1
+    allowFlip: 0
+  - prefab: {fileID: 8609538219538694159, guid: a0bf745bc4f247a4da3ada84aa820326,
+      type: 3}
+    Icon: {fileID: 21300000, guid: b87336b469555834abf5c985d066a332, type: 3}
+    defaultSize: 0
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 0
+    allowFlip: 1
+  - prefab: {fileID: 6725640824175116473, guid: b2fbba508c57d434096927cd4d4d767b,
+      type: 3}
+    Icon: {fileID: 21300000, guid: b92627a8e9565d34e9f2a2e70267a2e5, type: 3}
+    defaultSize: 0
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 0
+    allowFlip: 1
+  twentyByFortyDescriptors:
+  - prefab: {fileID: 8956553310047456282, guid: ebabac5d8c6d35c45b16808a059e969d,
+      type: 3}
+    Icon: {fileID: 21300000, guid: b2ce319f7143c8d478591d7c8f9e3ec3, type: 3}
+    defaultSize: 1
+    allowCustomSize: 1
+    allowRotateQuarter: 0
+    allowRotateHalf: 0
+    allowFlip: 0
+  - prefab: {fileID: 6005995014150537314, guid: 6f6f508261ad0f44ea0d4c72d85f6e01,
+      type: 3}
+    Icon: {fileID: 21300000, guid: 4198b07d842fa604aa05cac69dd9ae85, type: 3}
+    defaultSize: 2
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 1
+    allowFlip: 0
+  - prefab: {fileID: 8267935479145887704, guid: 92667bb818b23224b89f531803f859de,
+      type: 3}
+    Icon: {fileID: 21300000, guid: e3a536255a6e1e84bbb45050cb4165d3, type: 3}
+    defaultSize: 2
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 1
+    allowFlip: 0
+  - prefab: {fileID: 5801281868319300869, guid: dffab22c675514643a6ba13b2923f4a2,
+      type: 3}
+    Icon: {fileID: 21300000, guid: 3ceebae38cf1db046997d6402f3a09b7, type: 3}
+    defaultSize: 0
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 0
+    allowFlip: 1
+  - prefab: {fileID: 2007172343183233807, guid: 5c61b364359b8c547ad1f66f7f2a27e6,
+      type: 3}
+    Icon: {fileID: 21300000, guid: ccf017f3304844e47a11ef7dbcb45117, type: 3}
+    defaultSize: 0
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 1
+    allowFlip: 1
+  - prefab: {fileID: 3999605968325520985, guid: 51ff460421e76614385fff484a2a1d4a,
+      type: 3}
+    Icon: {fileID: 21300000, guid: 1c335ff9a3dbf68459a6e25f0bf3bfb4, type: 3}
+    defaultSize: 4
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 1
+    allowFlip: 1
+  - prefab: {fileID: 1213427263694040926, guid: 7a32442bc6f37e74f89f8164770601ce,
+      type: 3}
+    Icon: {fileID: 21300000, guid: f6bda3fd47984a04aaf1d0fc2487b303, type: 3}
+    defaultSize: 2
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 1
+    allowFlip: 1
+  fortyByFortyDescriptors:
+  - prefab: {fileID: 3867183337287356331, guid: a1d723c0a588efe4087315f1b27593f7,
+      type: 3}
+    Icon: {fileID: 21300000, guid: bf2200d4a6aa6f44ab7245262d00dcdf, type: 3}
+    defaultSize: 1
+    allowCustomSize: 1
+    allowRotateQuarter: 0
+    allowRotateHalf: 0
+    allowFlip: 0
+  - prefab: {fileID: 6698345584894438090, guid: bad6ebc9d36bf054a8385f16c60c5c68,
+      type: 3}
+    Icon: {fileID: 21300000, guid: 817f148f302f33742a04440df91140f4, type: 3}
+    defaultSize: 2
+    allowCustomSize: 0
+    allowRotateQuarter: 1
+    allowRotateHalf: 1
+    allowFlip: 0
+  - prefab: {fileID: 7991422451376248943, guid: bbc494ec15126844f8f1ebba88bbb078,
+      type: 3}
+    Icon: {fileID: 21300000, guid: 8b451197590ed774b8c73ec022ba9f68, type: 3}
+    defaultSize: 4
+    allowCustomSize: 0
+    allowRotateQuarter: 1
+    allowRotateHalf: 1
+    allowFlip: 1
+  - prefab: {fileID: 6187010381002793710, guid: 957b69c49bbb65b4d89a67054f5c917f,
+      type: 3}
+    Icon: {fileID: 21300000, guid: 63feb76b7f6778043bc1eca344e43ad6, type: 3}
+    defaultSize: 0
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 0
+    allowFlip: 1
+  - prefab: {fileID: 6142727788579790448, guid: 2855682cbd19b584c90c888a2f2008fc,
+      type: 3}
+    Icon: {fileID: 21300000, guid: d8c55790945b7304f8dd3d8b9c09ba6f, type: 3}
+    defaultSize: 0
+    allowCustomSize: 0
+    allowRotateQuarter: 0
+    allowRotateHalf: 0
+    allowFlip: 1
+  btnPart: {fileID: 9197481963319205126, guid: fe2a04644bc49124386dada49f4f6451, type: 3}
+  listItem: {fileID: 9197481963319205126, guid: c072e5b7e37e2a541b5016afdb75c21b,
+    type: 3}
+  inspector: {fileID: 9197481963319205126, guid: 73ba1fefb93c5f34a8c55a85524159db,
+    type: 3}
+  StepperMotorSound: {fileID: 8300000, guid: f27dd0b6d438c9444aec4a1ec18a633e, type: 3}

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/ExtrusionAsset/Editor/UI/stylesheet.uss?fileID=7433441132597879392&amp;guid=fc2f44d3e2846e241967ef8936cd111d&amp;type=3#stylesheet" />
+    <ui:Button text="&#10;" display-tooltip-when-elided="true" name="btnPart" class="btnPart" style="background-color: rgb(255, 255, 255); overflow: visible; -unity-background-scale-mode: scale-and-crop; height: 80px; width: 80px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+        <ui:VisualElement name="background" style="height: 100%; width: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; -unity-background-scale-mode: stretch-to-fill; scale: 1.2 1.2;" />
+        <ui:VisualElement name="plus" style="width: 20px; height: 20px; background-color: rgb(48, 48, 48); overflow: visible; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; position: absolute; left: 60px; top: -5px; align-items: center; justify-content: center; flex-wrap: nowrap; flex-direction: row;">
+            <ui:Label text="+" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center; align-items: center; -unity-text-align: lower-right; font-size: 20px; white-space: normal;" />
+        </ui:VisualElement>
+    </ui:Button>
+</ui:UXML>
