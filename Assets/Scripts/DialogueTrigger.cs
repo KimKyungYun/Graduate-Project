@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class DialogueTrigger : MonoBehaviour
     GameObject go_NPCobj;
     private bool isCollideWithDialogueObj = false;
     private bool isChoiceMode = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        dialogueByObject = other.gameObject.GetComponent<DialogueByObject>();
+        dialogueByObject = getDialogue(other);
 
         if (dialogueByObject != null)
         {
@@ -50,6 +52,8 @@ public class DialogueTrigger : MonoBehaviour
             isCollideWithDialogueObj = true;
         }
     }
+
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -70,5 +74,27 @@ public class DialogueTrigger : MonoBehaviour
         isChoiceMode = false;
     }
 
+    private DialogueByObject getDialogue(Collider other)
+    {
+        GamePhase presentGamePhase = GameManager.getPresentGamePhase();        
+        DialogueByObject[] dialogueList = other.gameObject.GetComponentsInChildren<DialogueByObject>();
+        
+        foreach(DialogueByObject dialogue in dialogueList)
+        {
+            Debug.Log("가지고있는 대화스크립트별 Phase 출력 :" +  dialogue.name.ToString());
+        }
 
+
+        foreach (DialogueByObject dialogue in dialogueList)
+        {
+            //Debug.Log("대화 스크립트의 게임오브젝트 이름" + dialogue.name.ToString());
+            
+
+            if (presentGamePhase.ToString().Equals(dialogue.gameObject.name.ToString()))
+            {
+                return dialogue;
+            }
+        }
+        return null;
+    }
 }

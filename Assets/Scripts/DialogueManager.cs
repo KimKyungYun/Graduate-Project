@@ -53,7 +53,9 @@ public class DialogueManager : MonoBehaviour
         talking = true;
 
         //초기, 이름, 대화텍스트 및 카메라 설정
-        NPCName.text = dialogueByObject.name;
+        Debug.Log(dialogueByObject.NPCName);
+
+        NPCName.text = dialogueByObject.NPCName;
         dlg = dialogueByObject.dialogue;
         float NPC_Height = dialogueByObject.NPC_Height;
 
@@ -71,9 +73,13 @@ public class DialogueManager : MonoBehaviour
             MQM.QuestIndexPlus();
         }
 
+        if(!dlg.changePhase.Equals(""))
+        {
+            GameManager.setGamePhase(dlg.changePhase);
+        }
+
         if (index == dlg.DialogueTextList.Length-1 && dlg.forceSelection)
         {
-            Debug.Log("log1");
             FindObjectOfType<DialogueTrigger>().onChoiceMode();// 선택모드 설정
 
             //선택지 창 출력
