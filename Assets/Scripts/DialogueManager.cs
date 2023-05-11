@@ -68,15 +68,16 @@ public class DialogueManager : MonoBehaviour
     public void UpdateDialogueText()
     {
         index++;
-        if (index == dlg.DialogueTextList.Length-1 && dlg.SpecialTag)
+        if (!dlg.changePhase.Equals(""))
         {
-            MQM.QuestIndexPlus();
+            GameManager.Instance.setGamePhase(dlg.changePhase);
         }
 
-        if(!dlg.changePhase.Equals(""))
+        if (index == dlg.DialogueTextList.Length-1 && !dlg.changePhase.Equals(""))
         {
-            GameManager.setGamePhase(dlg.changePhase);
+            MQM.updateQuestText();
         }
+
 
         if (index == dlg.DialogueTextList.Length-1 && dlg.forceSelection)
         {
@@ -134,7 +135,5 @@ public class DialogueManager : MonoBehaviour
         index = 0;
         DialogueText.text = dlg.DialogueTextList[index];
         FindObjectOfType<DialogueTrigger>().offChoiceMode();
-
-
     }
 }

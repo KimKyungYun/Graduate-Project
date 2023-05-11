@@ -5,25 +5,21 @@ using UnityEngine;
 
 public class MiniQuestBoxManager : MonoBehaviour
 {
-    public Quest[] Quests;    
     public TextMeshProUGUI QuestName;
-
-    private int QuestIndex;
     void Start()
     {
-        QuestIndex = 0;
-        QuestName.text = Quests[QuestIndex].QuestName;
+        GamePhase beginningPhase = GameManager.Instance.getPresentGamePhase();
+        QuestName.text = beginningPhase.miniQuestText;
     }
 
     // Update is called once per frame
     void Update()
     {
-        QuestName.text = Quests[QuestIndex].QuestName;
+        
     }
 
-    public void QuestIndexPlus()
+    public void updateQuestText()
     {
-        QuestIndex++;
-        QuestName.text = Quests[QuestIndex].QuestName;
+        QuestName.text = GameManager.Instance.getPresentGamePhase().miniQuestText;
     }
 }

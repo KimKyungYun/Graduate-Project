@@ -490,7 +490,6 @@ MonoBehaviour:
     - "\u314E\u31471"
     - "\u314E\u31472"
     - "\u314E\u31473"
-    SpecialTag: 0
     changePhase: 
     forceSelection: 0
     choiceSubject: 
@@ -3547,8 +3546,7 @@ MonoBehaviour:
     - "\u3141\u3134\u3147\u31391"
     - "\u3141\u3134\u3147\u31392"
     - "\uC5B4 \uBC18\uAC00\uC6CC \uC88B\uC740\uC544\uCE68\uC774\uB124"
-    SpecialTag: 0
-    changePhase: 
+    changePhase: AfterMeetJeremy
     forceSelection: 1
     choiceSubject: "\uC5B4\uB5BB\uAC8C \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
     ChoiceOptionList:
@@ -3558,7 +3556,6 @@ MonoBehaviour:
         - "\uADF8\uB798\uADF8\uB798 \uC790\uB124\uAC00 \uD574\uC57C\uD560 \uC77C\uC774
           \uC0DD\uACBC\uC5B4"
         - "\uC2EC\uC7A5\uBAA8\uD615\uC880 \uB9CC\uB4E4\uC5B4\uC8FC\uAC8C"
-        SpecialTag: 0
         changePhase: 
         forceSelection: 1
         choiceSubject: "\uC5B4\uB5BB\uAC8C \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
@@ -3568,7 +3565,6 @@ MonoBehaviour:
             DialogueTextList:
             - "? \uC790\uB124 \uC81C\uC815\uC2E0\uC778\uAC00"
             - "\uB2F9\uC7A5 \uB098\uAC00\uAC8C"
-            SpecialTag: 0
             changePhase: 
             forceSelection: 0
             choiceSubject: 
@@ -3578,7 +3574,6 @@ MonoBehaviour:
             DialogueTextList:
             - "\uC790\uB124 \uB4DC\uB514\uC5B4\uBBF8\uCCE4\uAD70\t"
             - "\uADC0\uCC2E\uC73C\uBA74 \uD68C\uC0AC\uB3C4 \uB098\uC624\uC9C0\uB9D0\uAC8C"
-            SpecialTag: 0
             changePhase: 
             forceSelection: 0
             choiceSubject: 
@@ -3589,7 +3584,6 @@ MonoBehaviour:
         - "\uD558\uC544.. \uC790\uB124 \uC0AC\uD68C\uC0DD\uD65C\uC744 \uC81C\uB300\uB85C
           \uBABB\uBC30\uC6E0\uAD70"
         - "\uC774\uB798\uC11C \uC694\uC998 MZ\uB4E4\uC740 .\uCBE7"
-        SpecialTag: 0
         changePhase: 
         forceSelection: 1
         choiceSubject: "\uC5B4\uB5BB\uAC8C \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
@@ -3599,7 +3593,6 @@ MonoBehaviour:
             DialogueTextList:
             - "\uBB50..\uBB50?"
             - "\uAF30\uB300...?"
-            SpecialTag: 0
             changePhase: 
             forceSelection: 0
             choiceSubject: 
@@ -3609,7 +3602,6 @@ MonoBehaviour:
             DialogueTextList:
             - "\uC790\uB124\uBBF8\uCE5C\uAC74\uAC00"
             - "\uD2C0..\uB531\uC774\uB77C\uB2C8..!!"
-            SpecialTag: 0
             changePhase: 
             forceSelection: 0
             choiceSubject: 
@@ -4634,38 +4626,6 @@ Transform:
   m_Children:
   - {fileID: 1026573744}
   m_Father: {fileID: 1001215671}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &179583459
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 179583460}
-  m_Layer: 0
-  m_Name: Phase1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &179583460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179583459}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 917155491}
-  m_Father: {fileID: 1474049652}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180069429
@@ -21340,7 +21300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22801,37 +22761,6 @@ Transform:
   m_Father: {fileID: 1574350231}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &917155490
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 917155491}
-  m_Layer: 0
-  m_Name: Jeremy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &917155491
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917155490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 179583460}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918304569
 GameObject:
   m_ObjectHideFlags: 0
@@ -23415,7 +23344,7 @@ RectTransform:
   - {fileID: 1490402585}
   - {fileID: 1256420605}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -35725,51 +35654,6 @@ Transform:
   m_Father: {fileID: 1507220776}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1474049650
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1474049652}
-  - component: {fileID: 1474049651}
-  m_Layer: 0
-  m_Name: DialogueData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1474049651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474049650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8251b8fe0202b0548bbcc6558dcf6778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1474049652
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474049650}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.258001, y: 0.42995098, z: -4.619596}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 179583460}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1474876218
 GameObject:
   m_ObjectHideFlags: 0
@@ -36752,37 +36636,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1870454880}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1501642709
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1501642710}
-  m_Layer: 0
-  m_Name: GamePhase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1501642710
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501642709}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 711.403, y: 229.7528, z: -4.391401}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1507220775
 GameObject:
@@ -40841,11 +40694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2371eea854b187248ae092c06c90eb81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Quests:
-  - QuestName: "\uC81C\uB808\uBBF8 \uBD80\uC7A5\uC744 \uCC3E\uC544\uAC00\uC138\uC694."
-    QuestDetail: "\uD558\uB098\uB2E4"
-  - QuestName: "X\uD0A4\uB97C \uB20C\uB7EC \uC694\uAD6C\uC0AC\uD56D\uC744 \uD655\uC778\uD558\uC138\uC694"
-    QuestDetail: "\uD558\uB098\uB2E4"
   QuestName: {fileID: 1780546050}
 --- !u!1 &1686092816
 GameObject:
@@ -41474,7 +41322,6 @@ MonoBehaviour:
     - "\uBC18\uAC001"
     - "\uBC18\uAC002"
     - "\uBC18\uAC113"
-    SpecialTag: 0
     changePhase: 
     forceSelection: 0
     choiceSubject: 
@@ -44124,7 +43971,7 @@ Transform:
   - {fileID: 1364864120}
   - {fileID: 1625130828}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1825366158
 GameObject:
@@ -44626,6 +44473,61 @@ Transform:
   m_Father: {fileID: 1999579531}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1848936088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1848936089}
+  - component: {fileID: 1848936090}
+  m_Layer: 0
+  m_Name: AfterMeetJeremy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1848936089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848936088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993246162}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1848936090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848936088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ed861476d01b042ae5419b910e3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: "\uC81C\uB808\uBBF8 \uBD80\uC7A5"
+  NPC_Height: 1.5
+  dialogue:
+    DialogueTextList:
+    - "\uC9C0\uAE08\uBB50\uD558\uB0D0?"
+    - "\uBE68\uB9AC\uBE68\uB9AC \uC548\uB9CC\uB4E4\uB7EC\uAC00\uACE0"
+    - "\uB2F9\uC7A5\uAEBC\uC838"
+    changePhase: 
+    forceSelection: 0
+    choiceSubject: 
+    ChoiceOptionList: []
 --- !u!1 &1849831212
 GameObject:
   m_ObjectHideFlags: 0
@@ -44688,6 +44590,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QM: {fileID: 2073729157}
+  gamePhaseList:
+  - phaseName: Beginning
+    miniQuestText: "\uC81C\uB808\uBBF8 \uBD80\uC7A5\uC744 \uCC3E\uC544\uAC00\uC138\uC694
+      \u314E\u314E"
+  - phaseName: AfterMeetJeremy
+    miniQuestText: "\uC81C\uB808\uBBF8\uD55C\uD14C \uBB3C\uB7EC\uB0AC\uB2E4\uAC00
+      \uB2E4\uC2DC \uB9D0\uC744 \uAC78\uC790"
 --- !u!4 &1854092556
 Transform:
   m_ObjectHideFlags: 0
@@ -47140,7 +47049,6 @@ MonoBehaviour:
     - "\u3147\u3145\u3147"
     - "\u3147\u3145\u31472"
     - "\u3147\u3145\u31473"
-    SpecialTag: 0
     changePhase: 
     forceSelection: 0
     choiceSubject: 
@@ -47922,6 +47830,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 147166431}
+  - {fileID: 1848936089}
   m_Father: {fileID: 1474876219}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

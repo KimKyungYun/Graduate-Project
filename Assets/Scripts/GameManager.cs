@@ -3,40 +3,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameManager : MonoBehaviour
 {
+    // SingleTon
+    static public GameManager Instance;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            Instance = this;
+        }
+
+        presentGamePhase = gamePhaseList[0];
+    }
+
     public QuestManager QM;
     private static GamePhase presentGamePhase;
-
+    public List<GamePhase> gamePhaseList;
 
     void Start()
     {
-        presentGamePhase = GamePhase.Beginning;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q) || OVRInput.GetDown(OVRInput.Button.One))
+        if (Input.GetKeyDown(KeyCode.Q) || OVRInput.GetDown(OVRInput.Button.One))
         {
             QM.ShowPanel();
         }
     }
-
-    public static GamePhase getPresentGamePhase()
+    public GamePhase getPresentGamePhase()
     {
         return presentGamePhase;
     }
 
-    public static void setGamePhase(GamePhase gamePhase)
+    public void setGamePhase(string gamePhase) 
     {
-        presentGamePhase = gamePhase;
+        foreach(GamePhase gp in gamePhaseList)
+        {
+            if (gp.phaseName.Equals(gamePhase)) { presentGamePhase = gp;  }
+        }
     }
-
-    public static void setGamePhase(string gamePhase) 
-    {
-        presentGamePhase = (GamePhase)Enum.Parse(typeof(GamePhase), gamePhase);
-        Debug.Log(presentGamePhase);
-    }
-
 }
