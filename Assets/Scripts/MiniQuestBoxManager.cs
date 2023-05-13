@@ -20,6 +20,10 @@ public class MiniQuestBoxManager : MonoBehaviour
 
     public void updateQuestText()
     {
-        QuestName.text = GameManager.Instance.getPresentGamePhase().miniQuestText;
+        GamePhase presentPhase = GameManager.Instance.getPresentGamePhase();
+        if (presentPhase.miniQuestText != "")
+        {
+            QuestName.text = GameManager.Instance.getPresentGamePhase().miniQuestText;
+        }
     }
 }

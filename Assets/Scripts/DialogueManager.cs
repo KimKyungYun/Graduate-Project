@@ -63,15 +63,17 @@ public class DialogueManager : MonoBehaviour
     public void UpdateDialogueText()
     {
         index++;
-        if (!dialogue.changePhase.Equals(""))
+
+        if (dialogue.changePhase!="")
         {
             GameManager.Instance.setGamePhase(dialogue.changePhase);
         }
 
-        if (index == dialogue.DialogueTextList.Length-1 && !dialogue.changePhase.Equals(""))
+        if (index == dialogue.DialogueTextList.Length-1 && dialogue.changePhase != "")
         {
             MQM.updateQuestText();
         }
+
 
 
         if (index == dialogue.DialogueTextList.Length-1 && dialogue.forceSelection)
@@ -120,7 +122,7 @@ public class DialogueManager : MonoBehaviour
         HiddenChoicePanel();
 
         //Choice에 맞는 diagloue변수 재설정
-        dialogue = dialogue.ChoiceOptionList[SelectedNumber].dialogue;
+        dialogue = dialogue.ChoiceOptionList[SelectedNumber-1].dialogue;
         index = 0;
         DialogueText.text = dialogue.DialogueTextList[index];
         FindObjectOfType<DialogueTrigger>().offChoiceMode();

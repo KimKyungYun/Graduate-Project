@@ -29,6 +29,9 @@ public class VRCanvasSetup : MonoBehaviour
     {
         float distanceY = 2.0f;
         //게임오브젝트의 transform 좌표 얻어온 후에 Canvas의 좌표를 해당좌표의 약간 위로 이동
+
+        Vector3 go_pos = gameObject.transform.position;
+        GetComponent<RectTransform>().position = new Vector3(go_pos.x, go_pos.y + distanceY, go_pos.z);
     }
 
     public bool isVrMode()
