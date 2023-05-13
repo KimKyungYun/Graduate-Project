@@ -74,8 +74,6 @@ public class DialogueManager : MonoBehaviour
             MQM.updateQuestText();
         }
 
-
-
         if (index == dialogue.DialogueTextList.Length-1 && dialogue.forceSelection)
         {
             FindObjectOfType<DialogueTrigger>().onChoiceMode();// 선택모드 설정
@@ -122,7 +120,7 @@ public class DialogueManager : MonoBehaviour
         HiddenChoicePanel();
 
         //Choice에 맞는 diagloue변수 재설정
-        dialogue = dialogue.ChoiceOptionList[SelectedNumber-1].dialogue;
+        dialogue = dialogue.ChoiceOptionList[SelectedNumber].dialogue;
         index = 0;
         DialogueText.text = dialogue.DialogueTextList[index];
         FindObjectOfType<DialogueTrigger>().offChoiceMode();

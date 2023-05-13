@@ -16,7 +16,6 @@ public class VRCanvasSetup : MonoBehaviour
             displayFrontOfPlayer();
         }
     }
-
     public void displayFrontOfPlayer()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();
@@ -27,11 +26,18 @@ public class VRCanvasSetup : MonoBehaviour
 
     public void displayOnObject(GameObject gameObject)
     {
-        float distanceY = 2.0f;
+        float distanceY = 3.7f;
         //게임오브젝트의 transform 좌표 얻어온 후에 Canvas의 좌표를 해당좌표의 약간 위로 이동
 
         Vector3 go_pos = gameObject.transform.position;
         GetComponent<RectTransform>().position = new Vector3(go_pos.x, go_pos.y + distanceY, go_pos.z);
+
+
+        //XR Origin의 Rotation 값을 받아서 Canvas의 Rotation값에 할당
+        GameObject XROrigin = GameObject.Find("XR Origin");
+        float PlayerRotationY = XROrigin.transform.eulerAngles.y;
+        Debug.Log(PlayerRotationY); 
+        GetComponent<RectTransform>().eulerAngles = new Vector3(0, PlayerRotationY, 0);
     }
 
     public bool isVrMode()
