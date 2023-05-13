@@ -90,12 +90,6 @@ public class DialogueManager : MonoBehaviour
                 choiceBoxes[i].SetActive(true);
                 ChoiceTexts[i].text = dlg.ChoiceOptionList[i].ChoiceText;
             }
-
-
-            //for (int i = 0; i < dlg.ChoiceOptionList.Length; i++)
-            //{
-            //    Debug.Log(dlg.ChoiceOptionList[i].ChoiceText);
-            //}
         }
 
         if (index >= dlg.DialogueTextList.Length)

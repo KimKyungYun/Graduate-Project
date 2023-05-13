@@ -11,17 +11,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-            Instance = this;
-        }
-
+        makeSingleTon();
         presentGamePhase = gamePhaseList[0];
     }
 
@@ -52,6 +42,18 @@ public class GameManager : MonoBehaviour
         foreach(GamePhase gp in gamePhaseList)
         {
             if (gp.phaseName.Equals(gamePhase)) { presentGamePhase = gp;  }
+        }
+    }
+
+
+
+    private void makeSingleTon()
+    {
+        if (Instance != null) Destroy(this.gameObject);
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            Instance = this;
         }
     }
 }
