@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class DialogueTrigger : MonoBehaviour
     GameObject go_NPCobj;
     private bool isCollideWithDialogueObj = false;
     private bool isChoiceMode = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,27 +31,28 @@ public class DialogueTrigger : MonoBehaviour
             DM.DisplayDialogue(dialogueByObject, go_NPCobj);
         }
 
-        if (isChoiceMode && Input.GetKeyDown(KeyCode.Z))
+        if (isChoiceMode && Input.GetKeyDown(KeyCode.Z))    
         {
-            DM.GetDialogueByChoice(1);
+            DM.GetDialogueByChoice(0);
         }
 
         if (isChoiceMode && Input.GetKeyDown(KeyCode.X))
         {
-            DM.GetDialogueByChoice(2);
+            DM.GetDialogueByChoice(1);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        dialogueByObject = other.gameObject.GetComponent<DialogueByObject>();
-
+        dialogueByObject = getDialogue(other);
         if (dialogueByObject != null)
         {
             go_NPCobj = other.gameObject;
             isCollideWithDialogueObj = true;
         }
     }
+
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -70,5 +73,18 @@ public class DialogueTrigger : MonoBehaviour
         isChoiceMode = false;
     }
 
-
+    private DialogueByObject getDialogue(Collider other)
+    {
+        GamePhase presentGamePhase = GameManager.Instance.getPresentGamePhase();        
+        DialogueByObject[] dialogueList = other.gameObject.GetComponentsInChildren<DialogueByObject>();
+        
+        foreach (DialogueByObject dialogue in dialogueList)
+        {   
+            if (presentGamePhase.phaseName.Equals(dialogue.gameObject.name))
+            {
+                return dialogue;
+            }
+        }
+        return null;
+    }
 }
