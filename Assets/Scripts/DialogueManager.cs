@@ -53,8 +53,6 @@ public class DialogueManager : MonoBehaviour
         talking = true;
 
         //초기, 이름, 대화텍스트 및 카메라 설정
-        Debug.Log(dialogueByObject.NPCName);
-
         NPCName.text = dialogueByObject.NPCName;
         dlg = dialogueByObject.dialogue;
         float NPC_Height = dialogueByObject.NPC_Height;

@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class DialogueByObject : MonoBehaviour
 {
@@ -12,4 +14,12 @@ public class DialogueByObject : MonoBehaviour
     [Header("Dialogue")]
 
     public Dialogue dialogue;
+
+    void Awake()
+    {
+        if (this.transform.root.GetComponent<XRSimpleInteractable>() == null)
+        {
+            this.transform.root.AddComponent<XRSimpleInteractable>();
+        }
+    }
 }
