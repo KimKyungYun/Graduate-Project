@@ -10,9 +10,7 @@ public class VRCanvasSetup : MonoBehaviour
     private void Awake()
     {
         makeSingleTon();
-        Canvas canvas = gameObject.GetComponent<Canvas>();
-
-        if (canvas.renderMode == RenderMode.WorldSpace)
+        if (isVrMode())
         {
             downSizeCanvas();
             displayFrontOfPlayer();
@@ -27,15 +25,20 @@ public class VRCanvasSetup : MonoBehaviour
         rectTransform.position = new Vector3(cameraVector.x, cameraVector.y, cameraVector.z + 4.0f);
     }
 
+    public void displayOnObject(GameObject gameObject)
+    {
+        float distanceY = 2.0f;
+        //게임오브젝트의 transform 좌표 얻어온 후에 Canvas의 좌표를 해당좌표의 약간 위로 이동
+    }
+
+    public bool isVrMode()
+    {
+        Canvas canvas = gameObject.GetComponent<Canvas>();
+        return (canvas.renderMode == RenderMode.WorldSpace);
+    }
     private void downSizeCanvas()
     {
         GetComponent<RectTransform>().localScale = new Vector3(0.01f, 0.01f, 0.01f);
-    }
-
-
-    public void placeOnObject()
-    {
-
     }
 
     private void makeSingleTon()

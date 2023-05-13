@@ -9,10 +9,10 @@ public class VRDialogueTrigger : MonoBehaviour
 
     public void OnSelectedEntered(SelectEnterEventArgs args)
     {
-        Debug.Log(args.interactableObject + "가 선택되었다");
-
         GameObject NPCObject = args.interactableObject.transform.gameObject;
-        if(NPCObject.GetComponentsInChildren<DialogueByObject>().Length != 0)
+        Debug.Log(NPCObject + "가 선택되었다");
+
+        if (NPCObject.GetComponentsInChildren<DialogueByObject>().Length != 0)
         {
             DialogueByObject dialogueByObject = getDialogue(NPCObject);
             Debug.Log(dialogueByObject);

@@ -31,21 +31,20 @@ public class DialogueTrigger : MonoBehaviour
             DM.DisplayDialogue(dialogueByObject, go_NPCobj);
         }
 
-        if (isChoiceMode && Input.GetKeyDown(KeyCode.Z))
+        if (isChoiceMode && Input.GetKeyDown(KeyCode.Z))    
         {
-            DM.GetDialogueByChoice(1);
+            DM.GetDialogueByChoice(0);
         }
 
         if (isChoiceMode && Input.GetKeyDown(KeyCode.X))
         {
-            DM.GetDialogueByChoice(2);
+            DM.GetDialogueByChoice(1);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         dialogueByObject = getDialogue(other);
-
         if (dialogueByObject != null)
         {
             go_NPCobj = other.gameObject;

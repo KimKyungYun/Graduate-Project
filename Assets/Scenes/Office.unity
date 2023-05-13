@@ -2864,7 +2864,7 @@ GameObject:
   - component: {fileID: 129576419}
   - component: {fileID: 129576418}
   - component: {fileID: 129576417}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11852,7 +11852,7 @@ GameObject:
   - component: {fileID: 472818476}
   - component: {fileID: 472818475}
   - component: {fileID: 472818474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17404,7 +17404,7 @@ GameObject:
   - component: {fileID: 699939512}
   - component: {fileID: 699939511}
   m_Layer: 5
-  m_Name: Choice4
+  m_Name: Choice3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17474,7 +17474,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 699939512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000416136}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: GetDialogueByChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &699939512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21657,7 +21669,7 @@ GameObject:
   - component: {fileID: 861951066}
   - component: {fileID: 861951065}
   m_Layer: 5
-  m_Name: Choice2
+  m_Name: Choice1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21727,7 +21739,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 861951066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000416136}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: GetDialogueByChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &861951066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24011,7 +24035,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &947191914
 Canvas:
   m_ObjectHideFlags: 0
@@ -24021,7 +24045,7 @@ Canvas:
   m_GameObject: {fileID: 947191911}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_Camera: {fileID: 1024546491}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -24043,7 +24067,7 @@ RectTransform:
   m_GameObject: {fileID: 947191911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 971504429}
@@ -24055,9 +24079,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: 1115, y: 519}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &947191916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24918,6 +24942,60 @@ Transform:
   m_Father: {fileID: 709223391}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &979351236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 979351237}
+  - component: {fileID: 979351238}
+  m_Layer: 0
+  m_Name: AfterMeetJeremy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &979351237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979351236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1854965260}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &979351238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979351236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ed861476d01b042ae5419b910e3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: "\uB514\uCE74\uD504\uB9AC\uC624"
+  NPC_Height: 1.5
+  dialogue:
+    DialogueTextList:
+    - "\uC57C \uC81C\uB808\uBBF8 \u3148\uAC19\uC9C0?"
+    - "\u314B\u314B \uD798\uB0B4\uB77C"
+    changePhase: 
+    forceSelection: 0
+    choiceSubject: 
+    ChoiceOptionList: []
 --- !u!1 &979992338
 GameObject:
   m_ObjectHideFlags: 0
@@ -25373,13 +25451,13 @@ GameObject:
   - component: {fileID: 994820609}
   - component: {fileID: 994820611}
   - component: {fileID: 994820613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: XR Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &994820606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26392,7 +26470,7 @@ GameObject:
   - component: {fileID: 1024546491}
   - component: {fileID: 1024546490}
   - component: {fileID: 1024546489}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -36799,7 +36877,7 @@ GameObject:
   - component: {fileID: 1479549033}
   - component: {fileID: 1479549032}
   - component: {fileID: 1479549031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37721,7 +37799,7 @@ GameObject:
   - component: {fileID: 1493960113}
   - component: {fileID: 1493960112}
   m_Layer: 5
-  m_Name: Choice1
+  m_Name: Choice0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37791,7 +37869,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1493960113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000416136}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: GetDialogueByChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1493960113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39173,7 +39263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1562442390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43451,7 +43541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1740629971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45283,7 +45373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1824240039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46138,6 +46228,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 15179984}
+  - {fileID: 979351237}
   m_Father: {fileID: 754342886}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49845,7 +49936,7 @@ GameObject:
   - component: {fileID: 2012533944}
   - component: {fileID: 2012533943}
   m_Layer: 5
-  m_Name: Choice3
+  m_Name: Choice2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49915,7 +50006,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2012533944}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000416136}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: GetDialogueByChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2012533944
 MonoBehaviour:
   m_ObjectHideFlags: 0

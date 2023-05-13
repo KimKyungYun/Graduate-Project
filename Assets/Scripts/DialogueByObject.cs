@@ -17,9 +17,9 @@ public class DialogueByObject : MonoBehaviour
 
     void Awake()
     {
-        if (this.transform.root.GetComponent<XRSimpleInteractable>() == null)
+        if (this.transform.parent.parent.GetComponent<XRSimpleInteractable>() == null)
         {
-            this.transform.root.AddComponent<XRSimpleInteractable>();
+            transform.parent.parent.AddComponent<XRSimpleInteractable>();
         }
     }
 }
