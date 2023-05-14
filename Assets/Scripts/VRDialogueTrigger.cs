@@ -10,8 +10,9 @@ public class VRDialogueTrigger : MonoBehaviour
     public void OnSelectedEntered(SelectEnterEventArgs args)
     {
         GameObject NPCObject = args.interactableObject.transform.gameObject;
-
-        if (NPCObject.GetComponentsInChildren<DialogueByObject>().Length != 0)
+        GameObject camera = GameObject.FindWithTag("MainCamera");
+        Debug.Log("°Å¸® : " + Vector3.Distance(NPCObject.transform.position, camera.transform.position));
+        if (haveDialogueData(NPCObject) && Vector3.Distance(NPCObject.transform.position, camera.transform.position) < 4.5f)
         {
             DialogueByObject dialogueByObject = getDialogue(NPCObject);
             Debug.Log(dialogueByObject);
@@ -28,10 +29,15 @@ public class VRDialogueTrigger : MonoBehaviour
         foreach (DialogueByObject dialogue in dialogueList)
         {
             if (presentGamePhase.phaseName.Equals(dialogue.gameObject.name))
-            {   
+            {
                 return dialogue;
             }
         }
         return null;
+    }
+
+    public bool haveDialogueData(GameObject NPCObject)
+    {
+        return (NPCObject.GetComponentsInChildren<DialogueByObject>().Length != 0);
     }
 }

@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     private Dialogue dialogue; // 현재 대화
     private int index; // 다이얼로그 내 대화 인덱스
     private bool talking = false;
+    private bool isChoiceMode = false;
     private int choiceNum = 0; // 선택지의 갯수
 
     void Start()
@@ -42,6 +43,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayDialogue(DialogueByObject dialogueByObject, GameObject NPCObj)
     {
+        if (isChoiceMode) { return; }
         if (talking)
         {
             UpdateDialogueText();
@@ -54,8 +56,8 @@ public class DialogueManager : MonoBehaviour
         dialogue = dialogueByObject.dialogue;
         getNpcCam(NPCObj, dialogueByObject.NPC_Height);
 
-        if  ( VRCanvasSetup.Instance.isVrMode() ) {VRCanvasSetup.Instance.displayOnObject(NPCObj);}
-        
+        VRCanvasSetup.Instance.displayOnObject(NPCObj);
+
         talking = true;
         DialogueText.text = dialogue.DialogueTextList[0];
     }
@@ -76,7 +78,7 @@ public class DialogueManager : MonoBehaviour
 
         if (index == dialogue.DialogueTextList.Length-1 && dialogue.forceSelection)
         {
-            FindObjectOfType<DialogueTrigger>().onChoiceMode();// 선택모드 설정
+            //FindObjectOfType<DialogueTrigger>().onChoiceMode();// 선택모드 설정
 
             //선택지 창 출력
             go_ChoiceSubjectPanel.SetActive(true);
@@ -87,12 +89,15 @@ public class DialogueManager : MonoBehaviour
                 choiceBoxes[i].SetActive(true);
                 ChoiceTexts[i].text = dialogue.ChoiceOptionList[i].ChoiceText;
             }
+            isChoiceMode= true;
         }
+
+
 
         if (index >= dialogue.DialogueTextList.Length)
         {
             HiddenDialogue();
-            FindObjectOfType<DialogueTrigger>().offChoiceMode();// 선택모드 해제
+            //FindObjectOfType<DialogueTrigger>().offChoiceMode();// 선택모드 해제
         }
 
         DialogueText.text = dialogue.DialogueTextList[index];
@@ -105,7 +110,7 @@ public class DialogueManager : MonoBehaviour
         talking = false;
     }
 
-    public void HiddenChoicePanel()
+    public void HiddenChoicePanel() 
     {
         go_ChoiceSubjectPanel.SetActive(false);
         for (int i = 0; i < choiceNum; i++)
@@ -123,13 +128,16 @@ public class DialogueManager : MonoBehaviour
         dialogue = dialogue.ChoiceOptionList[SelectedNumber].dialogue;
         index = 0;
         DialogueText.text = dialogue.DialogueTextList[index];
-        FindObjectOfType<DialogueTrigger>().offChoiceMode();
+        //FindObjectOfType<DialogueTrigger>().offChoiceMode();
+        isChoiceMode = false;
     }
 
     private void getNpcCam(GameObject NPCObj, float NPC_Height)
     {
+        Debug.Log("NPCObject L " + NPCObj);
         Vector3 NPC_Height_Vector = new Vector3(0, NPC_Height, 0);
         NPCCam.transform.position = NPCObj.transform.position + NPCObj.transform.rotation * Vector3.forward * 0.75f + NPC_Height_Vector;
+        Debug.Log("NPC캠의 포지션 : " +NPCCam.transform.position);
         NPCCam.transform.LookAt(NPCObj.transform.position + NPC_Height_Vector);
     }
 }

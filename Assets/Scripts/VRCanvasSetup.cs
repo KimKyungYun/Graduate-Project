@@ -10,11 +10,8 @@ public class VRCanvasSetup : MonoBehaviour
     private void Awake()
     {
         makeSingleTon();
-        if (isVrMode())
-        {
-            downSizeCanvas();
-            displayFrontOfPlayer();
-        }
+        downSizeCanvas();
+        displayFrontOfPlayer();
     }
     public void displayFrontOfPlayer()
     {
@@ -32,19 +29,13 @@ public class VRCanvasSetup : MonoBehaviour
         Vector3 go_pos = gameObject.transform.position;
         GetComponent<RectTransform>().position = new Vector3(go_pos.x, go_pos.y + distanceY, go_pos.z);
 
-
         //XR Origin의 Rotation 값을 받아서 Canvas의 Rotation값에 할당
-        GameObject XROrigin = GameObject.Find("XR Origin");
-        float PlayerRotationY = XROrigin.transform.eulerAngles.y;
-        Debug.Log(PlayerRotationY);
-        GetComponent<RectTransform>().eulerAngles = new Vector3(0, PlayerRotationY, 0);
+        GameObject mainCamera = GameObject.FindWithTag("MainCamera");
+        float cameraRotationY = mainCamera.transform.eulerAngles.y;
+
+        GetComponent<RectTransform>().eulerAngles = new Vector3(0, cameraRotationY, 0);
     }
 
-    public bool isVrMode()
-    {
-        Canvas canvas = gameObject.GetComponent<Canvas>();
-        return (canvas.renderMode == RenderMode.WorldSpace);
-    }
     private void downSizeCanvas()
     {
         GetComponent<RectTransform>().localScale = new Vector3(0.01f, 0.01f, 0.01f);
