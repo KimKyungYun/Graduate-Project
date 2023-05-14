@@ -487,9 +487,8 @@ MonoBehaviour:
   NPC_Height: 1.5
   dialogue:
     DialogueTextList:
-    - "\u314E\u31471"
-    - "\u314E\u31472"
-    - "\u314E\u31473"
+    - "\uC5B4 \uADF8\uB798 \uBC18\uAC00\uC6CC"
+    - "\uC0C8\uB85C\uC628 \uC2E0\uC785\uC774\uB77C\uC9C0?"
     changePhase: 
     forceSelection: 0
     choiceSubject: 
@@ -3959,9 +3958,10 @@ MonoBehaviour:
   NPC_Height: 1.5
   dialogue:
     DialogueTextList:
-    - "\u3141\u3134\u3147\u31391"
-    - "\u3141\u3134\u3147\u31392"
     - "\uC5B4 \uBC18\uAC00\uC6CC \uC88B\uC740\uC544\uCE68\uC774\uB124"
+    - "\uADFC\uCC98 \uAD50\uC721\uAE30\uAD00\uC5D0\uC11C \uC758\uB8B0\uAC00 \uB4E4\uC5B4\uC654\uC5B4"
+    - "\uC2EC\uC7A5\uBAA8\uD615\uC774 \uD544\uC694\uD55C \uAC83 \uAC19\uB358\uB370
+      \uB9CC\uB4E4\uC5B4\uC904 \uC218 \uC788\uACA0\uB098?"
     changePhase: AfterMeetJeremy
     forceSelection: 1
     choiceSubject: "\uC5B4\uB5BB\uAC8C \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
@@ -11994,7 +11994,7 @@ Transform:
   m_GameObject: {fileID: 472818473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.55, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -14345,7 +14345,7 @@ RectTransform:
   m_GameObject: {fileID: 560587187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1}
+  m_LocalScale: {x: 0.3366525, y: 0.42318648, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 971504429}
@@ -14353,7 +14353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -390.12146, y: -106.783905}
+  m_AnchoredPosition: {x: -38.5, y: -150.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &560587189
@@ -23661,7 +23661,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &947191914
 Canvas:
   m_ObjectHideFlags: 0
@@ -23671,7 +23671,7 @@ Canvas:
   m_GameObject: {fileID: 947191911}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_Camera: {fileID: 1024546491}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -23693,7 +23693,7 @@ RectTransform:
   m_GameObject: {fileID: 947191911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 971504429}
@@ -23705,9 +23705,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 538.5, y: 259}
-  m_SizeDelta: {x: 1077, y: 518}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &947191916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25083,7 +25083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &994820606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25144,7 +25144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 0}
-  m_MoveSpeed: 1
+  m_MoveSpeed: 2.5
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -28809,7 +28809,7 @@ RectTransform:
   m_GameObject: {fileID: 1160103287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.32062143, y: 0.40303475, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 971504429}
@@ -28817,8 +28817,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -104.04785}
-  m_SizeDelta: {x: 967.1229, y: 210.5279}
+  m_AnchoredPosition: {x: -11.1786, y: -89.609985}
+  m_SizeDelta: {x: 557.7822, y: 210.5279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160103289
 MonoBehaviour:
@@ -32588,8 +32588,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314728168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -612.8345, y: -294.82104, z: 19.584816}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -202.28, y: -196.33998, z: 19.584816}
+  m_LocalScale: {x: 0.32062143, y: 0.40303475, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 971504429}
@@ -36200,7 +36200,7 @@ RectTransform:
   m_GameObject: {fileID: 1470477648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.32062143, y: 0.40303475, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 971504429}
@@ -36208,8 +36208,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 2.8705444, y: -179.51077}
-  m_SizeDelta: {x: 886.86395, y: 86.9258}
+  m_AnchoredPosition: {x: -10.394009, y: -151.93715}
+  m_SizeDelta: {x: 468.9919, y: 108.9406}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470477650
 MonoBehaviour:
@@ -36266,8 +36266,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -36943,7 +36943,7 @@ MonoBehaviour:
   m_HoverTimeToSelect: 0.5
   m_EnableUIInteraction: 1
   m_AllowAnchorControl: 1
-  m_UseForceGrab: 1
+  m_UseForceGrab: 0
   m_RotateSpeed: 180
   m_TranslateSpeed: 1
   m_AnchorRotateReferenceFrame: {fileID: 0}
@@ -42524,9 +42524,8 @@ MonoBehaviour:
   NPC_Height: 1.5
   dialogue:
     DialogueTextList:
-    - "\uBC18\uAC001"
-    - "\uBC18\uAC002"
-    - "\uBC18\uAC113"
+    - "\uC81C\uB808\uBBF8\uAC00 \uB0B4 \uC0C1\uC0AC\uAC00 \uC544\uB2CC\uAC8C \uCC9C\uB9CC
+      \uB2E4\uD589\uC774\uC57C"
     changePhase: 
     forceSelection: 0
     choiceSubject: 
@@ -43205,7 +43204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1740629971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44986,7 +44985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1824240039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45471,7 +45470,7 @@ RectTransform:
   m_GameObject: {fileID: 1841061345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.32062143, y: 0.40303475, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 948689266}
@@ -45481,7 +45480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -390.12146, y: -106.783905}
+  m_AnchoredPosition: {x: -38.5, y: -150.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841061347
@@ -45799,9 +45798,8 @@ MonoBehaviour:
   NPC_Height: 1.5
   dialogue:
     DialogueTextList:
-    - "\uC9C0\uAE08\uBB50\uD558\uB0D0?"
+    - "\uC9C0\uAE08\uBB50\uD558\uB098?"
     - "\uBE68\uB9AC\uBE68\uB9AC \uC548\uB9CC\uB4E4\uB7EC\uAC00\uACE0"
-    - "\uB2F9\uC7A5\uAEBC\uC838"
     changePhase: 
     forceSelection: 0
     choiceSubject: 
@@ -45870,11 +45868,10 @@ MonoBehaviour:
   QM: {fileID: 2073729157}
   gamePhaseList:
   - phaseName: Beginning
-    miniQuestText: "\uC81C\uB808\uBBF8 \uBD80\uC7A5\uC744 \uCC3E\uC544\uAC00\uC138\uC694
-      \u314E\u314E"
+    miniQuestText: "\uC81C\uB808\uBBF8 \uBD80\uC7A5\uC744 \uCC3E\uC544\uAC00\uC138\uC694"
   - phaseName: AfterMeetJeremy
-    miniQuestText: "\uC81C\uB808\uBBF8\uD55C\uD14C \uBB3C\uB7EC\uB0AC\uB2E4\uAC00
-      \uB2E4\uC2DC \uB9D0\uC744 \uAC78\uC790"
+    miniQuestText: "\uC81C\uB808\uBBF8\uBD80\uC7A5\uD55C\uD14C \uB2E4\uC2DC \uB9D0\uC744
+      \uAC78\uC5B4\uBCF4\uC790"
 --- !u!4 &1854092556
 Transform:
   m_ObjectHideFlags: 0
@@ -46967,18 +46964,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908065940}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.005545764, w: 0.9999846}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.32062143, y: 0.40303475, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 971504429}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.636}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -265.73425, y: -94.04785}
-  m_SizeDelta: {x: 131.35284, y: 29.1608}
+  m_AnchoredPosition: {x: -2.9, y: -115.42996}
+  m_SizeDelta: {x: 131.3528, y: 29.1113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1908065942
 MonoBehaviour:
@@ -48304,9 +48301,8 @@ MonoBehaviour:
   NPC_Height: 1.5
   dialogue:
     DialogueTextList:
-    - "\u3147\u3145\u3147"
-    - "\u3147\u3145\u31472"
-    - "\u3147\u3145\u31473"
+    - "\uC81C\uB808\uBBF8 \uADF8\uC0AC\uB78C \uC815\uB9D0 \uAF34\uB3C4 \uBCF4\uAE30
+      \uC2EB\uAD70"
     changePhase: 
     forceSelection: 0
     choiceSubject: 

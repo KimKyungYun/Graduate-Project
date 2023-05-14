@@ -36,7 +36,7 @@ public class VRCanvasSetup : MonoBehaviour
         //XR Origin의 Rotation 값을 받아서 Canvas의 Rotation값에 할당
         GameObject XROrigin = GameObject.Find("XR Origin");
         float PlayerRotationY = XROrigin.transform.eulerAngles.y;
-        Debug.Log(PlayerRotationY); 
+        Debug.Log(PlayerRotationY);
         GetComponent<RectTransform>().eulerAngles = new Vector3(0, PlayerRotationY, 0);
     }
 
