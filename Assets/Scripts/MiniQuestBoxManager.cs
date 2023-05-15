@@ -24,11 +24,13 @@ public class MiniQuestBoxManager : MonoBehaviour
     public void displayQuestBox()
     {
         miniQuestBox.SetActive(true);
+        VRCanvasHandler.Instance.displayFrontOfPlayer(miniQuestBox, 3.7f);
         //여기에 이펙트효과를 넣기
     }
     public void updateQuestText()
     {
         miniQuestBox.SetActive(true);
+        VRCanvasHandler.Instance.displayFrontOfPlayer(miniQuestBox, 5.0f);
 
         GamePhase presentPhase = GameManager.Instance.getPresentGamePhase();
         if (presentPhase.miniQuestText != "")
@@ -40,9 +42,6 @@ public class MiniQuestBoxManager : MonoBehaviour
     private void makeSingleTon()
     {
         if (Instance != null) Destroy(this.gameObject);
-        else
-        {
-            Instance = this;
-        }
+        else Instance = this;
     }
 }

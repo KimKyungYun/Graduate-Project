@@ -13,16 +13,16 @@ public class GameManager : MonoBehaviour
     static public GameManager Instance;
 
     public UnityEvent GamePhaseChange;
+    public QuestManager QM;
+    private static GamePhase presentGamePhase;
+    public List<GamePhase> gamePhaseList;
 
     private void Awake()
     {
         makeSingleTon();
         presentGamePhase = gamePhaseList[0];
+        //setGamePhase(gamePhaseList[0].phaseName);
     }
-
-    public QuestManager QM;
-    private static GamePhase presentGamePhase;
-    public List<GamePhase> gamePhaseList;
 
     void Start()
     {

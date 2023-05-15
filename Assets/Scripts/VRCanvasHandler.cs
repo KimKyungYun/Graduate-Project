@@ -25,6 +25,37 @@ public class VRCanvasHandler : MonoBehaviour
         displayObject.GetComponent<RectTransform>().eulerAngles = new Vector3(0, cameraRotationY, 0);
     }
 
+    public void displayFrontOfPlayer(GameObject displayObject, float distance)
+    {
+        GameObject camera = GameObject.FindWithTag("MainCamera");
+        GameObject player = GameObject.FindWithTag("Player");
+
+        float cameraRotationY = camera.transform.eulerAngles.y;
+        displayObject.GetComponent<RectTransform>().eulerAngles = new Vector3(0, cameraRotationY, 0);
+
+        Vector3 playerPos = player.transform.position;
+        Vector3 cameraPos = camera.transform.position;
+
+        float deltaZ = distance * Mathf.Sin(cameraRotationY);
+        float deltaX = distance * Mathf.Cos(cameraRotationY);
+
+        //�Ʊ plyaerPos.x + deltaZ
+
+        //displayObject.GetComponent<RectTransform>().position = new Vector3(cameraPos.x, cameraPos.y + 1.5f, cameraPos.z - distanceZ);
+        displayObject.GetComponent<RectTransform>().position = new Vector3( (playerPos.x + deltaX + playerPos.x + deltaZ ) /2 , playerPos.y , ( playerPos.z + deltaZ + playerPos.z + deltaX ) / 2);
+
+
+    }
+
+
+    //public void displayFrontOfPlayer(float distanceZ)
+    //{
+    //    RectTransform rectTransform = GetComponent<RectTransform>();
+    //    GameObject camera = GameObject.FindWithTag("MainCamera");
+    //    Vector3 cameraVector = camera.transform.position;
+    //    rectTransform.position = new Vector3(cameraVector.x, cameraVector.y, cameraVector.z + distanceZ);
+    //}
+
     private void initCanvasPosition()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();
@@ -67,11 +98,4 @@ public class VRCanvasHandler : MonoBehaviour
 
 
 
-    //public void displayFrontOfPlayer(float distanceZ)
-    //{
-    //    RectTransform rectTransform = GetComponent<RectTransform>();
-    //    GameObject camera = GameObject.FindWithTag("MainCamera");
-    //    Vector3 cameraVector = camera.transform.position;
-    //    rectTransform.position = new Vector3(cameraVector.x, cameraVector.y, cameraVector.z + distanceZ);
-    //}
 }

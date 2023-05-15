@@ -5,6 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ControllerInputManager : MonoBehaviour
 {
+    static public ControllerInputManager Instance;
+
     public XRController leftHand;
     public XRController rightHand;
     private InputHelpers.Button PrimaryButton = InputHelpers.Button.PrimaryButton;
@@ -37,6 +39,9 @@ public class ControllerInputManager : MonoBehaviour
         leftHand.inputDevice.IsPressed(PrimaryButton, out pressed);
         return pressed;
     }
-
-
+    private void makeSingleTon()
+    {
+        if (Instance != null) Destroy(this.gameObject);
+        else Instance = this;
+    }
 }
