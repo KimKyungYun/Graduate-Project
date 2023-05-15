@@ -9,19 +9,19 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     //DialogueBox관련 UI 변수
-    public GameObject go_DialoguePanel;
+    public GameObject dialogueBox;
     public TextMeshProUGUI NPCName;
     public TextMeshProUGUI DialogueText;
     public GameObject NPCCam;
 
     //ChoiceBox관련 UI변수
+    public GameObject choiceBox;
     public GameObject go_ChoiceSubjectPanel;
     public TextMeshProUGUI ChoiceSubjectText;
     public GameObject[] choiceBoxes;
     public TextMeshProUGUI[] ChoiceTexts;
 
-    public MiniQuestBoxManager MQM;
-
+    private GameObject NPCObj;
     private Dialogue dialogue; // 현재 대화
     private int index; // 다이얼로그 내 대화 인덱스
     private bool talking = false;
@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
         //NPCName = GameObject.Find("NPCName").GetComponent<TextMeshProUGUI>();
 
         index = 0;
-        go_DialoguePanel.SetActive(false);
+        dialogueBox.SetActive(false);
         go_ChoiceSubjectPanel.SetActive(false);
         for (int i = 0; i < choiceBoxes.Length; i++)
         {
@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayDialogue(DialogueByObject dialogueByObject, GameObject NPCObj)
     {
+        this.NPCObj = NPCObj;
         if (isChoiceMode) { return; }
         if (talking)
         {
@@ -51,10 +52,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        VRCanvasSetup.Instance.displayOnObject(NPCObj, 3.7f);
+        VRCanvasHandler.Instance.displayOnObject(dialogueBox, NPCObj, 3.7f);
 
         //패널 띄우기 + 초기, 이름, 대화텍스트 및 카메라 설정
-        go_DialoguePanel.SetActive(true);
+        dialogueBox.SetActive(true);
         NPCName.text = dialogueByObject.NPCName;
         dialogue = dialogueByObject.dialogue;
         getNpcCam(NPCObj, dialogueByObject.NPC_Height);
@@ -75,6 +76,8 @@ public class DialogueManager : MonoBehaviour
         if (index == dialogue.DialogueTextList.Length-1 && dialogue.forceSelection)
         {
             //선택지 창 출력
+            VRCanvasHandler.Instance.displayOnObject(choiceBox, NPCObj, 3.7f);
+
             go_ChoiceSubjectPanel.SetActive(true);
             choiceNum = dialogue.ChoiceOptionList.Length;
             ChoiceSubjectText.text = dialogue.choiceSubject;
@@ -99,7 +102,7 @@ public class DialogueManager : MonoBehaviour
     public void HiddenDialogue()
     {
         index = 0;
-        go_DialoguePanel.SetActive(false);
+        dialogueBox.SetActive(false);
         talking = false;
     }
 

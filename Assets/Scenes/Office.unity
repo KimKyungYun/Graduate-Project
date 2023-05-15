@@ -23413,6 +23413,7 @@ GameObject:
   - component: {fileID: 947191912}
   - component: {fileID: 947191916}
   - component: {fileID: 947191917}
+  - component: {fileID: 947191918}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -23538,6 +23539,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &947191918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947191911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066459e81d845f14082b47336c7eb654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choiceBox: {fileID: 0}
+  go_ChoiceSubjectPanel: {fileID: 0}
+  ChoiceSubjectText: {fileID: 0}
+  choiceBoxes: []
+  ChoiceTexts: []
+  isChoiceMode: 0
+  choiceNum: 0
 --- !u!1 &947869324
 GameObject:
   m_ObjectHideFlags: 0
@@ -27810,6 +27830,52 @@ Transform:
   - {fileID: 1006827313}
   m_Father: {fileID: 1146976584}
   m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1103891184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1103891186}
+  - component: {fileID: 1103891185}
+  m_Layer: 0
+  m_Name: ControllerInputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1103891185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103891184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f128d0edd3b184bada98d60d85c7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 1479549035}
+  rightHand: {fileID: 129576421}
+--- !u!4 &1103891186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103891184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 485.12088, y: 505.29904, z: 96.253654}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105071403
 GameObject:
@@ -48880,10 +48946,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71acac2e1d592145ad198e4bf1bc223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go_DialoguePanel: {fileID: 971504428}
+  dialogueBox: {fileID: 971504428}
   NPCName: {fileID: 1908065942}
   DialogueText: {fileID: 1470477650}
   NPCCam: {fileID: 1314728168}
+  choiceBox: {fileID: 1256420604}
   go_ChoiceSubjectPanel: {fileID: 857601437}
   ChoiceSubjectText: {fileID: 1951433828}
   choiceBoxes:
@@ -48896,7 +48963,6 @@ MonoBehaviour:
   - {fileID: 1541775374}
   - {fileID: 510960755}
   - {fileID: 637622162}
-  MQM: {fileID: 1685846577}
 --- !u!4 &2000416137
 Transform:
   m_ObjectHideFlags: 0
