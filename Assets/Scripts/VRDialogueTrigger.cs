@@ -11,8 +11,8 @@ public class VRDialogueTrigger : MonoBehaviour
     {
         GameObject NPCObject = args.interactableObject.transform.gameObject;
         GameObject camera = GameObject.FindWithTag("MainCamera");
-        Debug.Log("°Å¸® : " + Vector3.Distance(NPCObject.transform.position, camera.transform.position));
-        if (haveDialogueData(NPCObject) && Vector3.Distance(NPCObject.transform.position, camera.transform.position) < 4.5f)
+
+        if (haveDialogueData(NPCObject) && Vector3.Distance(NPCObject.transform.position, camera.transform.position) < 8.5f)
         {
             DialogueByObject dialogueByObject = getDialogue(NPCObject);
             Debug.Log(dialogueByObject);
