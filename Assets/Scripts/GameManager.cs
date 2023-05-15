@@ -2,12 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class GameManager : MonoBehaviour
 {
     // SingleTon
     static public GameManager Instance;
+
+    public UnityEvent GamePhaseChange;
 
     private void Awake()
     {
@@ -27,6 +32,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (Input.GetKeyDown(KeyCode.Q) || OVRInput.GetDown(OVRInput.Button.One))
         {
             QM.ShowPanel();
@@ -42,11 +49,13 @@ public class GameManager : MonoBehaviour
     {
         foreach(GamePhase gp in gamePhaseList)
         {
-            if (gp.phaseName.Equals(gamePhase)) { presentGamePhase = gp;  }
+            if (gp.phaseName.Equals(gamePhase))
+            { 
+                presentGamePhase = gp;
+                GamePhaseChange.Invoke();
+            }
         }
     }
-
-
 
     private void makeSingleTon()
     {

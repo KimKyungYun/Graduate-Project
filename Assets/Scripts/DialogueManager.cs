@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,7 +51,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        VRCanvasSetup.Instance.displayOnObject(NPCObj);
+        VRCanvasSetup.Instance.displayOnObject(NPCObj, 3.7f);
 
         //패널 띄우기 + 초기, 이름, 대화텍스트 및 카메라 설정
         go_DialoguePanel.SetActive(true);
@@ -71,15 +72,8 @@ public class DialogueManager : MonoBehaviour
             GameManager.Instance.setGamePhase(dialogue.changePhase);
         }
 
-        if (index == dialogue.DialogueTextList.Length-1 && dialogue.changePhase != "")
-        {
-            MQM.updateQuestText();
-        }
-
         if (index == dialogue.DialogueTextList.Length-1 && dialogue.forceSelection)
         {
-            //FindObjectOfType<DialogueTrigger>().onChoiceMode();// 선택모드 설정
-
             //선택지 창 출력
             go_ChoiceSubjectPanel.SetActive(true);
             choiceNum = dialogue.ChoiceOptionList.Length;
@@ -97,7 +91,6 @@ public class DialogueManager : MonoBehaviour
         if (index >= dialogue.DialogueTextList.Length)
         {
             HiddenDialogue();
-            //FindObjectOfType<DialogueTrigger>().offChoiceMode();// 선택모드 해제
         }
 
         DialogueText.text = dialogue.DialogueTextList[index];
@@ -128,16 +121,13 @@ public class DialogueManager : MonoBehaviour
         dialogue = dialogue.ChoiceOptionList[SelectedNumber].dialogue;
         index = 0;
         DialogueText.text = dialogue.DialogueTextList[index];
-        //FindObjectOfType<DialogueTrigger>().offChoiceMode();
         isChoiceMode = false;
     }
 
     private void getNpcCam(GameObject NPCObj, float NPC_Height)
     {
-        Debug.Log("NPCObject L " + NPCObj);
         Vector3 NPC_Height_Vector = new Vector3(0, NPC_Height, 0);
         NPCCam.transform.position = NPCObj.transform.position + NPCObj.transform.rotation * Vector3.forward * 0.75f + NPC_Height_Vector;
-        Debug.Log("NPC캠의 포지션 : " +NPCCam.transform.position);
         NPCCam.transform.LookAt(NPCObj.transform.position + NPC_Height_Vector);
     }
 }

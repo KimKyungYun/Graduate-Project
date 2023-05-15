@@ -11,19 +11,18 @@ public class VRCanvasSetup : MonoBehaviour
     {
         makeSingleTon();
         downSizeCanvas();
-        displayFrontOfPlayer();
+        displayFrontOfPlayer(4.0f);
     }
-    public void displayFrontOfPlayer()
+    public void displayFrontOfPlayer(float distanceZ)
     {
         RectTransform rectTransform = GetComponent<RectTransform>();
         GameObject camera = GameObject.FindWithTag("MainCamera");
         Vector3 cameraVector = camera.transform.position;
-        rectTransform.position = new Vector3(cameraVector.x, cameraVector.y, cameraVector.z + 4.0f);
+        rectTransform.position = new Vector3(cameraVector.x, cameraVector.y, cameraVector.z + distanceZ);
     }
 
-    public void displayOnObject(GameObject gameObject)
+    public void displayOnObject(GameObject gameObject, float distanceY)
     {
-        float distanceY = 3.7f;
         //게임오브젝트의 transform 좌표 얻어온 후에 Canvas의 좌표를 해당좌표의 약간 위로 이동
 
         Vector3 go_pos = gameObject.transform.position;
@@ -46,7 +45,6 @@ public class VRCanvasSetup : MonoBehaviour
         if (Instance != null) Destroy(this.gameObject);
         else
         {
-            DontDestroyOnLoad(this.gameObject);
             Instance = this;
         }
     }

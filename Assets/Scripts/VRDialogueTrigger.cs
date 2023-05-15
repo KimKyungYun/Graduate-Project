@@ -34,9 +34,4 @@ public class VRDialogueTrigger : MonoBehaviour
         }
         return null;
     }
-
-    public bool haveDialogueData(GameObject NPCObject)
-    {
-        return (NPCObject.GetComponentsInChildren<DialogueByObject>().Length != 0);
-    }
 }

@@ -26,17 +26,4 @@ public class SceneHandler : MonoBehaviour
         Vector3 respwanPosition = new Vector3(-10.4f, 0.1f, -15f);
         XRPlayer.transform.position = respwanPosition;
     }
-
-    //public void SwitchScene(SelectEnterEventArgs args)
-    //{
-    //    Scene scene = SceneManager.GetActiveScene();
-    //    if (scene.name == "Office")
-    //    {
-    //        SceneManager.LoadScene("sci-fi");
-    //    }
-    //    else if (scene.name == "sci-fi")
-    //    {
-    //        SceneManager.LoadScene("Office");
-    //    }
-    //}
 }
