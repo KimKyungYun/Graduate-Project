@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) || OVRInput.GetDown(OVRInput.Button.One))
         {
             QM.ShowPanel();
+            Debug.Log("OVR Input ¿€µø");
         }
     }
     public GamePhase getPresentGamePhase()
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
         if (Instance != null) Destroy(this.gameObject);
         else
         {
-            DontDestroyOnLoad(this.gameObject);
+            //DontDestroyOnLoad(this.gameObject);
             Instance = this;
         }
     }

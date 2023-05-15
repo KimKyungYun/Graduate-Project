@@ -50,13 +50,13 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        VRCanvasSetup.Instance.displayOnObject(NPCObj);
+
         //패널 띄우기 + 초기, 이름, 대화텍스트 및 카메라 설정
         go_DialoguePanel.SetActive(true);
         NPCName.text = dialogueByObject.NPCName;
         dialogue = dialogueByObject.dialogue;
         getNpcCam(NPCObj, dialogueByObject.NPC_Height);
-
-        VRCanvasSetup.Instance.displayOnObject(NPCObj);
 
         talking = true;
         DialogueText.text = dialogue.DialogueTextList[0];
