@@ -3085,7 +3085,7 @@ MonoBehaviour:
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
   m_EnableUIInteraction: 1
-  m_AllowAnchorControl: 0
+  m_AllowAnchorControl: 1
   m_UseForceGrab: 0
   m_RotateSpeed: 180
   m_TranslateSpeed: 1
@@ -3820,63 +3820,51 @@ MonoBehaviour:
     - "\uADFC\uCC98 \uAD50\uC721\uAE30\uAD00\uC5D0\uC11C \uC758\uB8B0\uAC00 \uB4E4\uC5B4\uC654\uC5B4"
     - "\uC2EC\uC7A5\uBAA8\uD615\uC774 \uD544\uC694\uD55C \uAC83 \uAC19\uB358\uB370
       \uB9CC\uB4E4\uC5B4\uC904 \uC218 \uC788\uACA0\uB098?"
-    changePhase: AfterMeetJeremy
+    changePhase: 
     forceSelection: 1
     choiceSubject: "\uC5B4\uB5BB\uAC8C \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
     ChoiceOptionList:
-    - ChoiceText: "\uB124\uB124 \uBD80\uC7A5\uB2D8 \uC88B\uC740\uC544\uCE68\uC785\uB2C8\uB2E4."
+    - ChoiceText: "\uB135 \uB2F9\uC7A5 \uB9CC\uB4E4\uC5B4\uC624\uACA0\uC2B5\uB2C8\uB2E4."
       dialogue:
         DialogueTextList:
-        - "\uADF8\uB798\uADF8\uB798 \uC790\uB124\uAC00 \uD574\uC57C\uD560 \uC77C\uC774
-          \uC0DD\uACBC\uC5B4"
-        - "\uC2EC\uC7A5\uBAA8\uD615\uC880 \uB9CC\uB4E4\uC5B4\uC8FC\uAC8C"
-        changePhase: 
-        forceSelection: 1
-        choiceSubject: "\uC5B4\uB5BB\uAC8C \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
-        ChoiceOptionList:
-        - ChoiceText: "\uD558 \uBB34\uC2A8 \uC2EC\uC7A5\uBAA8\uD615\uC774\uC694 \u3161\u3161"
-          dialogue:
-            DialogueTextList:
-            - "? \uC790\uB124 \uC81C\uC815\uC2E0\uC778\uAC00"
-            - "\uB2F9\uC7A5 \uB098\uAC00\uAC8C"
-            changePhase: 
-            forceSelection: 0
-            choiceSubject: 
-            ChoiceOptionList: []
-        - ChoiceText: "\uADC0\uCC2E\uC740\uB370\uC694"
-          dialogue:
-            DialogueTextList:
-            - "\uC790\uB124 \uB4DC\uB514\uC5B4\uBBF8\uCCE4\uAD70\t"
-            - "\uADC0\uCC2E\uC73C\uBA74 \uD68C\uC0AC\uB3C4 \uB098\uC624\uC9C0\uB9D0\uAC8C"
-            changePhase: 
-            forceSelection: 0
-            choiceSubject: 
-            ChoiceOptionList: []
-    - ChoiceText: "\uBCC4\uB85C \uC88B\uC9C0 \uC54A\uC740\uB370\uC694"
+        - "\uADF8\uB798 \uADF8\uB798 "
+        - "\uC790\uB124\uB294 \uC694\uC998 \uC560\uB4E4\uACFC\uB294 \uB2E4\uB974\uAD6C\uB9CC"
+        - "\uADF8\uB7EC\uBA74 \uC790\uB124\uB9CC \uBBFF\uACE0 \uC788\uACA0\uB124
+          \uC694\uAD6C\uC0AC\uD56D\uC740 \uC544\uB9C8 \uB514\uCE74\uD504\uB9AC\uC624\uAC00
+          \uC815\uB9AC\uD574\uB193\uC558\uC744\uAC70\uC57C"
+        changePhase: AfterMeetJeremy
+        forceSelection: 0
+        choiceSubject: 
+        ChoiceOptionList: []
+    - ChoiceText: "\uADF8\uB7F0\uB370 \uC81C\uAC00 \uC544\uC9C1 \uC2E0\uC785\uC774\uB77C..
+        \uC798\uBABB\uD560\uAC83 \uAC19\uC740\uB370.."
       dialogue:
         DialogueTextList:
-        - "\uD558\uC544.. \uC790\uB124 \uC0AC\uD68C\uC0DD\uD65C\uC744 \uC81C\uB300\uB85C
-          \uBABB\uBC30\uC6E0\uAD70"
-        - "\uC774\uB798\uC11C \uC694\uC998 MZ\uB4E4\uC740 .\uCBE7"
+        - "\uC790\uB124 \uB9C8\uC778\uB4DC\uAC00 \uC65C \uADF8\uB7F0\uAC00?"
+        - "\uADF8\uB7F0 \uB9C8\uC778\uB4DC\uB77C\uBA74 \uB0B4 \uBC11\uC5D0\uC11C
+          \uC77C\uD558\uAE30 \uD798\uB4DC\uB2C8 \uB2E4\uB978\uC77C \uC54C\uC544\uBCF4\uAC8C\uB098"
         changePhase: 
         forceSelection: 1
-        choiceSubject: "\uC5B4\uB5BB\uAC8C \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+        choiceSubject: "\uC5B4\uB5BB\uAC8C \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C"
         ChoiceOptionList:
-        - ChoiceText: "\uBB50\uB798 \uC774 \uAF30\uB300\uB294"
+        - ChoiceText: "\uC608 \uC54C\uACA0\uC2B5\uB2C8\uB2E4. \uB2E4\uB978\uC77C
+            \uCC3E\uC544\uBCF4\uACA0\uC2B5\uB2C8\uB2E4!"
           dialogue:
             DialogueTextList:
-            - "\uBB50..\uBB50?"
-            - "\uAF30\uB300...?"
+            - "\uBB50..\uBB50\uB77C\uACE0?"
+            - "(\uD55C\uC228)"
             changePhase: 
             forceSelection: 0
             choiceSubject: 
             ChoiceOptionList: []
-        - ChoiceText: "\uB124\uB2E4\uC74C\uD2C0\uB531"
+        - ChoiceText: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4. \uC5B4\uB5BB\uAC8C\uB4E0 \uB9CC\uB4E4\uC5B4
+            \uC624\uACA0\uC2B5\uB2C8\uB2E4"
           dialogue:
             DialogueTextList:
-            - "\uC790\uB124\uBBF8\uCE5C\uAC74\uAC00"
-            - "\uD2C0..\uB531\uC774\uB77C\uB2C8..!!"
-            changePhase: 
+            - "\uD6C4\uC6B0.. \uADF8\uB798"
+            - "\uC694\uAD6C\uC0AC\uD56D\uC740 \uC544\uB9C8 \uB514\uCE74\uD504\uB9AC\uC624\uAC00
+              \uC815\uB9AC\uD574\uB193\uC558\uC744\uAC70\uC57C"
+            changePhase: AfterMeetJeremy
             forceSelection: 0
             choiceSubject: 
             ChoiceOptionList: []
@@ -8121,6 +8109,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 499430, guid: ee0f2f3138bae435fa34ca918ac97c37, type: 3}
   m_PrefabInstance: {fileID: 335095918}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &336173311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.951
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.128
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.895
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      propertyPath: m_Name
+      value: heart model B
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1299431367}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1299431366}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1299431368}
+  m_SourcePrefab: {fileID: 100100000, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
 --- !u!1 &337164736
 GameObject:
   m_ObjectHideFlags: 0
@@ -11856,7 +11926,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &476213761
 GameObject:
@@ -13273,7 +13343,7 @@ Transform:
   - {fileID: 1016501508}
   - {fileID: 1317654562}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &538888134
 GameObject:
@@ -22117,7 +22187,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &906741568
 MonoBehaviour:
@@ -23502,7 +23572,7 @@ RectTransform:
   - {fileID: 1549464953}
   - {fileID: 1976952770}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -24448,9 +24518,11 @@ MonoBehaviour:
   NPC_Height: 1.5
   dialogue:
     DialogueTextList:
-    - "\uC57C \uC81C\uB808\uBBF8 \u3148\uAC19\uC9C0?"
-    - "\u314B\u314B \uD798\uB0B4\uB77C"
-    changePhase: 
+    - "\uC544 \uADF8 \uC774\uBC88\uC5D0 \uC2EC\uC7A5\uBAA8\uD615\uC5D0\uB300\uD55C
+      \uC758\uB8B0?"
+    - "\uADF8\uAC70\uB77C\uBA74 \uC544\uB9C8 \uD504\uB9B0\uD130\uC2E4\uC5D0 \uC788\uB294
+      \uD3F4\uC774 \uB354 \uC798 \uC54C\uD150\uB370.."
+    changePhase: GoPrinterRoom
     forceSelection: 0
     choiceSubject: 
     ChoiceOptionList: []
@@ -24949,7 +25021,7 @@ Transform:
   - {fileID: 1562442390}
   - {fileID: 1740629972}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &994820609
 MonoBehaviour:
@@ -25049,6 +25121,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c968bf5799b375b43ba1c40e005ef0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &999181183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999181184}
+  - component: {fileID: 999181185}
+  m_Layer: 0
+  m_Name: GoPrinterRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &999181184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999181183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1836768593}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &999181185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999181183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ed861476d01b042ae5419b910e3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: "\uCF00\uBE48"
+  NPC_Height: 1.5
+  dialogue:
+    DialogueTextList:
+    - "\uC5B4 \uD504\uB9B0\uD130\uC2E4\uC774 \uC5B4\uB528\uB0D0\uACE0?"
+    - "\uC800\uAE30 \uBCF4\uC774\uB294 \uD654\uCD08\uC5D0\uC11C \uC67C\uCABD\uC73C\uB85C
+      \uAEBE\uC73C\uBA74 \uD504\uB9B0\uD130\uC2E4\uB85C \uD1B5\uD558\uB294 \uBB38\uC774
+      \uB098\uC62C\uAC70\uC57C"
+    changePhase: 
+    forceSelection: 0
+    choiceSubject: 
+    ChoiceOptionList: []
 --- !u!1 &999971065
 GameObject:
   m_ObjectHideFlags: 0
@@ -26400,7 +26528,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1040476638
 PrefabInstance:
@@ -27919,7 +28047,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105071403
 GameObject:
@@ -32285,6 +32413,184 @@ Transform:
   m_Father: {fileID: 1144923718}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1299431362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0984c7f5819074ed48c9af2a046e28e3, type: 3}
+  m_PrefabInstance: {fileID: 336173311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1299431366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299431362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 1740629971}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 0
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 5
+  m_TightenPosition: 0.5
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 5
+  m_TightenRotation: 0.5
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+--- !u!54 &1299431367
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299431362}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1299431368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299431362}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.1026845, y: 6.04162, z: 5.7211537}
+  m_Center: {x: -0.0086865425, y: 0.10740924, z: 0.18554223}
 --- !u!1 &1304366234
 GameObject:
   m_ObjectHideFlags: 0
@@ -33899,7 +34205,7 @@ Transform:
   - {fileID: 2000416137}
   - {fileID: 2073729156}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1374868568
 MonoBehaviour:
@@ -37039,7 +37345,7 @@ Transform:
   - {fileID: 286337368}
   - {fileID: 1370853386}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485457024
 GameObject:
@@ -37784,6 +38090,59 @@ Transform:
   m_Father: {fileID: 596463512}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1508910998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1508910999}
+  - component: {fileID: 1508911000}
+  m_Layer: 0
+  m_Name: GoPrinterRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1508910999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508910998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2057471848}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1508911000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508910998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ed861476d01b042ae5419b910e3c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: "\uC81C\uC784\uC2A4"
+  NPC_Height: 1.5
+  dialogue:
+    DialogueTextList:
+    - "\uC544 \uD1F4\uC0AC\uD558\uACE0\uC2F6\uB2E4."
+    changePhase: 
+    forceSelection: 0
+    choiceSubject: 
+    ChoiceOptionList: []
 --- !u!1 &1509132768
 GameObject:
   m_ObjectHideFlags: 0
@@ -39955,7 +40314,7 @@ Transform:
   m_Children:
   - {fileID: 1422783247}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605150140
 GameObject:
@@ -44979,6 +45338,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1965189738}
+  - {fileID: 999181184}
   m_Father: {fileID: 331204767}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45535,8 +45895,9 @@ MonoBehaviour:
   - phaseName: Beginning
     miniQuestText: "\uC81C\uB808\uBBF8 \uBD80\uC7A5\uC744 \uCC3E\uC544\uAC00\uC138\uC694"
   - phaseName: AfterMeetJeremy
-    miniQuestText: "\uC81C\uB808\uBBF8\uBD80\uC7A5\uD55C\uD14C \uB2E4\uC2DC \uB9D0\uC744
-      \uAC78\uC5B4\uBCF4\uC790"
+    miniQuestText: "\uB514\uCE74\uD504\uB9AC\uC624\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC5B4\uBCF4\uC790"
+  - phaseName: GoPrinterRoom
+    miniQuestText: "\uD504\uB9B0\uD130\uC2E4\uB85C \uAC00\uC11C \uD3F4\uC744 \uCC3E\uC544\uBCF4\uC790"
 --- !u!4 &1854092556
 Transform:
   m_ObjectHideFlags: 0
@@ -50914,6 +51275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1710297121}
+  - {fileID: 1508910999}
   m_Father: {fileID: 782529267}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51951,7 +52313,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2090079430
 GameObject:
