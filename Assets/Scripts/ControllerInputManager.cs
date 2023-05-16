@@ -11,14 +11,9 @@ public class ControllerInputManager : MonoBehaviour
     public XRController rightHand;
     private InputHelpers.Button PrimaryButton = InputHelpers.Button.PrimaryButton;
 
-    void Update()
+    private void Awake()
     {
-        if (PrimaryButtonPressed())
-        {
-            Debug.Log("Hello - " + PrimaryButton);
-
-            MiniQuestBoxManager.Instance.displayQuestBox();
-        }
+        makeSingleTon();
     }
 
     public bool PrimaryButtonPressed()

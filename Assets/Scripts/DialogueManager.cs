@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour
     {
         index++;
 
-        if (dialogue.changePhase!="")
+        if (dialogue.changePhase!="" && index == dialogue.DialogueTextList.Length-1)
         {
             GameManager.Instance.setGamePhase(dialogue.changePhase);
         }

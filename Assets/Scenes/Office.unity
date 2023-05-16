@@ -489,6 +489,7 @@ MonoBehaviour:
     DialogueTextList:
     - "\uC5B4 \uADF8\uB798 \uBC18\uAC00\uC6CC"
     - "\uC0C8\uB85C\uC628 \uC2E0\uC785\uC774\uB77C\uC9C0?"
+    - "\uC81C\uB808\uBBF8 \uBD80\uC7A5\uC774 \uCC3E\uB354\uAD70. \uC5B4\uC11C \uAC00\uBD10"
     changePhase: 
     forceSelection: 0
     choiceSubject: 
@@ -27028,6 +27029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1057942349}
+  - component: {fileID: 1057942350}
   m_Layer: 5
   m_Name: MiniQuestBox
   m_TagString: Untagged
@@ -27056,6 +27058,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1057942350
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057942348}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1057960426
 GameObject:
   m_ObjectHideFlags: 0
@@ -47952,8 +47966,7 @@ MonoBehaviour:
   NPC_Height: 1.5
   dialogue:
     DialogueTextList:
-    - "\uC81C\uB808\uBBF8 \uADF8\uC0AC\uB78C \uC815\uB9D0 \uAF34\uB3C4 \uBCF4\uAE30
-      \uC2EB\uAD70"
+    - "\uC81C\uB808\uBBF8 \uBD80\uC7A5 \uC544\uCE68\uBD80\uD130 \uD654\uAC00 \uB9CE\uC774\uB0AC\uB354\uB77C"
     changePhase: 
     forceSelection: 0
     choiceSubject: 

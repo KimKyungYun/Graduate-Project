@@ -9,10 +9,14 @@ public class MiniQuestBoxManager : MonoBehaviour
 
     public TextMeshProUGUI QuestName;
     public GameObject miniQuestBox;
+
+    private bool visible = false;
+
+    private bool updateEvent = false;
     void Awake()
     {
         makeSingleTon();
-        miniQuestBox.SetActive(false);
+        miniQuestBox.GetComponent<CanvasGroup>().alpha = 0.0f;
     }
 
     void Start()
@@ -20,28 +24,79 @@ public class MiniQuestBoxManager : MonoBehaviour
         GamePhase beginningPhase = GameManager.Instance.getPresentGamePhase();
         QuestName.text = beginningPhase.miniQuestText;
     }
+    
+    void Update()
+    {
+        VRCanvasHandler.Instance.displayFrontOfPlayer(miniQuestBox, 3f);
+
+        if (ControllerInputManager.Instance.PrimaryButtonPressed() && !visible)
+        {
+            displayQuestBox();
+        }
+
+        else if (!ControllerInputManager.Instance.PrimaryButtonPressed() && !updateEvent)
+        {
+            if (visible || miniQuestBox.GetComponent<CanvasGroup>().alpha <= 1.0f)
+                hiddenQuestBox();
+        }
+
+        if (updateEvent)
+        {
+            displayQuestBox();
+            if (miniQuestBox.GetComponent<CanvasGroup>().alpha == 1)
+            {
+                updateEvent = false;
+                hiddenQuestBox();
+            }
+        }
+    }
+
 
     public void displayQuestBox()
     {
-        miniQuestBox.SetActive(true);
-        VRCanvasHandler.Instance.displayFrontOfPlayer(miniQuestBox, 3.7f);
-        //여기에 이펙트효과를 넣기
+        fadein();
     }
     public void updateQuestText()
     {
-        miniQuestBox.SetActive(true);
-        VRCanvasHandler.Instance.displayFrontOfPlayer(miniQuestBox, 5.0f);
-
         GamePhase presentPhase = GameManager.Instance.getPresentGamePhase();
         if (presentPhase.miniQuestText != "")
         {
             QuestName.text = GameManager.Instance.getPresentGamePhase().miniQuestText;
+            updateEvent = true;
         }
+    }
+
+    public void hiddenQuestBox()
+    {
+        fadeout();
     }
 
     private void makeSingleTon()
     {
         if (Instance != null) Destroy(this.gameObject);
         else Instance = this;
+    }
+
+    private void fadein()
+    {
+        CanvasGroup canvasGroup = miniQuestBox.GetComponent<CanvasGroup>();
+        if (canvasGroup.alpha < 1)
+        {
+            canvasGroup.alpha += Time.deltaTime;
+        }
+
+        else if (canvasGroup.alpha == 1) { visible =true; }
+    }
+
+    private void fadeout()
+    {
+        CanvasGroup canvasGroup = miniQuestBox.GetComponent<CanvasGroup>();
+        if (canvasGroup.alpha > 0)
+        {
+            canvasGroup.alpha -= Time.deltaTime;
+        }
+
+        else if (canvasGroup.alpha == 0) { visible = false; }
+
     }
 }
