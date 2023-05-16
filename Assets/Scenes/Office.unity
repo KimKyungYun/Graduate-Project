@@ -23484,7 +23484,6 @@ GameObject:
   - component: {fileID: 947191912}
   - component: {fileID: 947191916}
   - component: {fileID: 947191917}
-  - component: {fileID: 947191918}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -23610,18 +23609,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &947191918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947191911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 066459e81d845f14082b47336c7eb654, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &947869324
 GameObject:
   m_ObjectHideFlags: 0
@@ -45896,8 +45883,11 @@ MonoBehaviour:
     miniQuestText: "\uC81C\uB808\uBBF8 \uBD80\uC7A5\uC744 \uCC3E\uC544\uAC00\uC138\uC694"
   - phaseName: AfterMeetJeremy
     miniQuestText: "\uB514\uCE74\uD504\uB9AC\uC624\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC5B4\uBCF4\uC790"
-  - phaseName: GoPrinterRoom
+  - phaseName: FirstMeetPaul
     miniQuestText: "\uD504\uB9B0\uD130\uC2E4\uB85C \uAC00\uC11C \uD3F4\uC744 \uCC3E\uC544\uBCF4\uC790"
+  - phaseName: FirstProcess
+    miniQuestText: "\uD504\uB9B0\uD130 \uC606\uC5D0 \uC788\uB294 \uB9B4\uB9AC\uC5D0\uAC8C
+      \uAC00\uBCF4\uC790."
 --- !u!4 &1854092556
 Transform:
   m_ObjectHideFlags: 0
