@@ -23484,6 +23484,7 @@ GameObject:
   - component: {fileID: 947191912}
   - component: {fileID: 947191916}
   - component: {fileID: 947191917}
+  - component: {fileID: 947191918}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -23609,6 +23610,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &947191918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947191911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c968bf5799b375b43ba1c40e005ef0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &947869324
 GameObject:
   m_ObjectHideFlags: 0
@@ -24509,7 +24522,7 @@ MonoBehaviour:
       \uC758\uB8B0?"
     - "\uADF8\uAC70\uB77C\uBA74 \uC544\uB9C8 \uD504\uB9B0\uD130\uC2E4\uC5D0 \uC788\uB294
       \uD3F4\uC774 \uB354 \uC798 \uC54C\uD150\uB370.."
-    changePhase: GoPrinterRoom
+    changePhase: FirstMeetPaul
     forceSelection: 0
     choiceSubject: 
     ChoiceOptionList: []
