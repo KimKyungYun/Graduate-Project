@@ -30,8 +30,6 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        //NPCName = GameObject.Find("NPCName").GetComponent<TextMeshProUGUI>();
-
         index = 0;
         dialogueBox.SetActive(false);
         go_ChoiceSubjectPanel.SetActive(false);
@@ -67,36 +65,34 @@ public class DialogueManager : MonoBehaviour
     public void UpdateDialogueText()
     {
         index++;
+        int dialogueLength = dialogue.DialogueTextList.Length;
 
-        if (dialogue.changePhase!="" && index == dialogue.DialogueTextList.Length-1)
+        if (index == dialogueLength - 1 && dialogue.choiceSubject != "")
         {
-            GameManager.Instance.setGamePhase(dialogue.changePhase);
-        }
-
-        if (index == dialogue.DialogueTextList.Length-1 && dialogue.forceSelection)
-        {
-            //선택지 창 출력
             VRCanvasHandler.Instance.displayOnObject(choiceBox, NPCObj, 3.7f);
-
-            go_ChoiceSubjectPanel.SetActive(true);
-            choiceNum = dialogue.ChoiceOptionList.Length;
-            ChoiceSubjectText.text = dialogue.choiceSubject;
-            for(int i = 0; i < choiceNum; i++)
-            {
-                choiceBoxes[i].SetActive(true);
-                ChoiceTexts[i].text = dialogue.ChoiceOptionList[i].ChoiceText;
-            }
-            isChoiceMode= true;
+            displayChoiceBox();
         }
 
-
-
-        if (index >= dialogue.DialogueTextList.Length)
+        if (index >= dialogueLength)
         {
             HiddenDialogue();
+            if (dialogue.changePhase!="") GameManager.Instance.setGamePhase(dialogue.changePhase);
         }
 
         DialogueText.text = dialogue.DialogueTextList[index];
+    }
+
+    private void displayChoiceBox()
+    {
+        go_ChoiceSubjectPanel.SetActive(true);
+        choiceNum = dialogue.ChoiceOptionList.Length;
+        ChoiceSubjectText.text = dialogue.choiceSubject;
+        for (int i = 0; i < choiceNum; i++)
+        {
+            choiceBoxes[i].SetActive(true);
+            ChoiceTexts[i].text = dialogue.ChoiceOptionList[i].ChoiceText;
+        }
+        isChoiceMode = true;
     }
 
     public void HiddenDialogue()

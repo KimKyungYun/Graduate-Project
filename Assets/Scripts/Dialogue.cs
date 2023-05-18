@@ -9,7 +9,6 @@ public class Dialogue
     [TextArea (2,5)]
     public string[] DialogueTextList;
     public string changePhase;
-    public bool forceSelection;
     public string choiceSubject;
     public ChoiceOption [] ChoiceOptionList;
 }
