@@ -24,12 +24,11 @@ public class SceneHandler : MonoBehaviour
 
     private void Update()
     {
-        if ( Input.GetKeyDown(KeyCode.K))
+        if ( Input.GetKeyDown(KeyCode.M) )
         {
             SwitchSceneToScifi();
         }
     }
-
     public void SwitchSceneToScifi()
     {
         StartCoroutine(_SwitchSceneToScifi());
@@ -42,26 +41,15 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene("sci-fi");
         yield return new WaitForSeconds(1.0f);
 
-        Vector3 respwanPosition = new Vector3(-10.4f, 1.284f, -15f);
+        //기존 리스폰 위치 위치 
+        //Vector3 respwanPosition = new Vector3(-10.4f, 1.284f, -15f);
+
+        //디버깅용 리스폰
+        Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
         XRPlayer.transform.position = respwanPosition;
         VRCanvasHandler.Instance.displayFrontOfPlayer(fadeBox, 0.5f);
         StartCoroutine(fade(1, 0, fadeTime));
     }
-
-
-    //public void SwitchSceneToScifi()
-    //{
-    //    VRCanvasHandler.Instance.displayFrontOfPlayer(fadeBox, 1f);
-    //    StartCoroutine(fade(0, 1, fadeTime));
-
-
-
-    //    //SceneManager.LoadScene("sci-fi");
-    //    //Vector3 respwanPosition = new Vector3(-10.4f, 0.1f, -15f);
-    //    //XRPlayer.transform.position = respwanPosition;
-    //}
-
-
 
     private IEnumerator fade(float start, float end, float fadeTime)
     {
