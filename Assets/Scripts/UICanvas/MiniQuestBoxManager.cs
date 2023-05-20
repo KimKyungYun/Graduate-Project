@@ -10,13 +10,14 @@ public class MiniQuestBoxManager : MonoBehaviour
     public TextMeshProUGUI QuestName;
     public GameObject miniQuestBox;
 
+    private CanvasGroup canvasGroup;
     private bool visible = false;
-
     private bool updateEvent = false;
     void Awake()
     {
         makeSingleTon();
-        miniQuestBox.GetComponent<CanvasGroup>().alpha = 0.0f;
+        canvasGroup= miniQuestBox.GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 0.0f;
     }
 
     void Start()
@@ -36,14 +37,14 @@ public class MiniQuestBoxManager : MonoBehaviour
 
         else if (!ControllerInputManager.Instance.PrimaryButtonPressed() && !updateEvent)
         {
-            if (visible || miniQuestBox.GetComponent<CanvasGroup>().alpha <= 1.0f)
+            if (visible || canvasGroup.alpha <= 1.0f)
                 hiddenQuestBox();
         }
 
         if (updateEvent)
         {
             displayQuestBox();
-            if (miniQuestBox.GetComponent<CanvasGroup>().alpha == 1)
+            if (canvasGroup.alpha == 1)
             {
                 updateEvent = false;
                 hiddenQuestBox();
@@ -79,7 +80,6 @@ public class MiniQuestBoxManager : MonoBehaviour
 
     private void fadein()
     {
-        CanvasGroup canvasGroup = miniQuestBox.GetComponent<CanvasGroup>();
         if (canvasGroup.alpha < 1)
         {
             canvasGroup.alpha += Time.deltaTime;
@@ -90,7 +90,6 @@ public class MiniQuestBoxManager : MonoBehaviour
 
     private void fadeout()
     {
-        CanvasGroup canvasGroup = miniQuestBox.GetComponent<CanvasGroup>();
         if (canvasGroup.alpha > 0)
         {
             canvasGroup.alpha -= Time.deltaTime;

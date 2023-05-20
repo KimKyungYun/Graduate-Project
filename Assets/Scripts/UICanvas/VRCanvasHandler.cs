@@ -6,12 +6,12 @@ using UnityEngine;
 public class VRCanvasHandler : MonoBehaviour
 {
     static public VRCanvasHandler Instance;
+
     private void Awake()
     {
         makeSingleTon();
         downSizeCanvas();
         initCanvasPosition();
-        //displayFrontOfPlayer(3.7f);
     }
 
     public void displayOnObject(GameObject displayObject, GameObject targetObject, float distanceY)
