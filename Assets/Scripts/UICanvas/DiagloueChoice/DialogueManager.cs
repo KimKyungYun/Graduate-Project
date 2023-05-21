@@ -60,6 +60,13 @@ public class DialogueManager : MonoBehaviour
 
         talking = true;
         DialogueText.text = dialogue.DialogueTextList[0];
+
+       
+        if (dialogue.DialogueTextList.Length == 1 && dialogue.choiceSubject != "")
+        {
+            VRCanvasHandler.Instance.displayOnObject(choiceBox, NPCObj, 3.7f);
+            displayChoiceBox();
+        }
     }
 
     public void UpdateDialogueText()
