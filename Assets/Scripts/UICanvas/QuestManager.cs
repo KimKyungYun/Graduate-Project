@@ -5,29 +5,35 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public GameObject go_QuestPanel;
-    bool PanelOn = false;
+    public GameObject questBox;
 
     void Start()
     {
-        go_QuestPanel.SetActive(false);
+        questBox.SetActive(false);
     }
     void Update()
     {
-        
+        VRCanvasHandler.Instance.displayFrontOfPlayer(questBox, 4f, 0, 0);
+
+        if ( ControllerInputManager.Instance.RightSecondaryButtonPressed())
+        {
+            Debug.Log("Secondary Button Pressed");
+            ShowPanel();
+        }
+
+        else
+        {
+            offPanel();
+        }
     }
 
     public void ShowPanel()
     {
-        if(!PanelOn)
-        {
-            go_QuestPanel.SetActive(true);
-            PanelOn = true;
-        }
-        else 
-        { 
-            go_QuestPanel.SetActive(false);
-            PanelOn = false;
-        }
+        questBox.SetActive(true);
+    }
+
+    public void offPanel()
+    {
+        questBox.SetActive(false);
     }
 }

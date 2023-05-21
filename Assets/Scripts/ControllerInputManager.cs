@@ -10,6 +10,7 @@ public class ControllerInputManager : MonoBehaviour
     public XRController leftHand;
     public XRController rightHand;
     private InputHelpers.Button PrimaryButton = InputHelpers.Button.PrimaryButton;
+    private InputHelpers.Button SecondaryButton = InputHelpers.Button.SecondaryButton;
 
     private void Awake()
     {
@@ -19,6 +20,11 @@ public class ControllerInputManager : MonoBehaviour
     public bool PrimaryButtonPressed()
     {
         return (RightPrimaryButtonPressed() || LeftPrimaryButtonPressed());
+    }
+
+    public bool SecondaryButtonPressed()
+    {
+        return (RightSecondaryButtonPressed() || LeftSecondaryButtonPressed());
     }
 
     public bool RightPrimaryButtonPressed()
@@ -34,6 +40,19 @@ public class ControllerInputManager : MonoBehaviour
         leftHand.inputDevice.IsPressed(PrimaryButton, out pressed);
         return pressed;
     }
+    public bool RightSecondaryButtonPressed()
+    {
+        bool pressed;
+        rightHand.inputDevice.IsPressed(SecondaryButton, out pressed);
+        return pressed;
+    }
+    public bool LeftSecondaryButtonPressed()
+    {
+        bool pressed;
+        leftHand.inputDevice.IsPressed(SecondaryButton, out pressed);
+        return pressed;
+    }
+
     private void makeSingleTon()
     {
         if (Instance != null) Destroy(this.gameObject);

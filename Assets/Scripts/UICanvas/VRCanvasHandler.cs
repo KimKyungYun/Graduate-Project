@@ -45,6 +45,17 @@ public class VRCanvasHandler : MonoBehaviour
         displayObject.transform.position += Camera.main.transform.right * -1.0f  + Camera.main.transform.up * -0.75f;
     }
 
+    public void displayFrontOfPlayer(GameObject displayObject, float distance, float adjustX, float adjustY)
+    {
+        float cameraRotationY = Camera.main.transform.eulerAngles.y;
+        displayObject.GetComponent<RectTransform>().eulerAngles = new Vector3(0, cameraRotationY, 0);
+        displayObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * distance;
+
+        //Á¶Á¤°ª
+        displayObject.transform.position += Camera.main.transform.right * adjustX + Camera.main.transform.up * adjustY;
+    }
+
+
     private void initCanvasPosition()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();

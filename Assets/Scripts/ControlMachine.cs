@@ -8,12 +8,14 @@ using UnityEngine.SceneManagement;
 public class ControlMachine : MonoBehaviour
 {
     private GameObject presentMachine;
+    
 
     public void controlOn()
     {
         if (presentMachine.name.Equals("Delta"))
         {
             presentMachine.GetComponent<DeltaXYZ>().enabled = true;
+            presentMachine.GetComponent<Fade>().visible= true;
         }
         else
         {

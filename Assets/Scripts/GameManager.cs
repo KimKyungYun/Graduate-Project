@@ -32,13 +32,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
-        if (Input.GetKeyDown(KeyCode.Q) || OVRInput.GetDown(OVRInput.Button.One))
-        {
-            QM.ShowPanel();
-            Debug.Log("OVR Input ¿€µø");
-        }
     }
     public GamePhase getPresentGamePhase()
     {
