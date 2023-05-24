@@ -7,6 +7,7 @@ public class PutFilament : MonoBehaviour
     // Start is called before the first frame update
     public GameObject printer;
     public GameObject line;
+    public GameObject print_object;
     private Vector3 firstLocation;
     private Vector3 angle;
 
@@ -21,8 +22,10 @@ public class PutFilament : MonoBehaviour
     public void ChangeAlpha(){
         Color oldColor = GetComponent<Renderer>().material.color;        
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, 1);
+        Color objectColor = new Color(oldColor.r, oldColor.g, oldColor.b, 0);
         printer.GetComponent<Renderer>().material.SetColor("_Color", newColor);
         line.GetComponent<Renderer>().material.SetColor("_Color", newColor);
+        print_object.GetComponent<SkinnedMeshRenderer>().material.SetColor("_Color", objectColor);
     }
     
     void Update()
@@ -30,8 +33,6 @@ public class PutFilament : MonoBehaviour
         if(Vector3.Distance(printer.transform.position, transform.position)<=1.0f)
         {
             ChangeAlpha();
-            //printer.GetComponent<Renderer>().material.SetColor("_Color",GetComponent<Renderer>().material.color);
-            //line.GetComponent<Renderer>().material.SetColor("_Color",GetComponent<Renderer>().material.color);
             transform.position=firstLocation;
             transform.eulerAngles=angle;
         }
