@@ -8,23 +8,14 @@ public class step : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        if (ControllerInputManager.Instance.LeftJoystickControlled())
         {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                footstepsSound.enabled = false;
-                //sprintSound.enabled = true;
-            }
-            else
-            {
-                footstepsSound.enabled = true;
-                //sprintSound.enabled = false;
-            }
+            Debug.Log("LeftJoystic¡∂¿€¡ﬂ");
+            footstepsSound.enabled = true;
         }
         else
         {
             footstepsSound.enabled = false;
-            //sprintSound.enabled = false;
         }
     }
 }

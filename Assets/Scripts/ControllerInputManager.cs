@@ -27,6 +27,19 @@ public class ControllerInputManager : MonoBehaviour
         return (RightSecondaryButtonPressed() || LeftSecondaryButtonPressed());
     }
 
+    public bool LeftJoystickControlled()
+    {
+        Vector2 vector2 = new Vector2(0, 0);
+
+
+        InputHelpers.Axis2D leftJoystick = InputHelpers.Axis2D.PrimaryAxis2D;
+
+        leftHand.inputDevice.TryReadAxis2DValue(leftJoystick, out vector2);
+
+
+        return !vector2.Equals(Vector2.zero);
+    }
+
     public bool RightPrimaryButtonPressed()
     {
         bool pressed;
