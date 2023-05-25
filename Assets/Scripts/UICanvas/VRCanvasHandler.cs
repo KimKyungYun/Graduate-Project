@@ -14,6 +14,7 @@ public class VRCanvasHandler : MonoBehaviour
         initCanvasPosition();
     }
 
+    //로테이션을 카메라에 맞춤
     public void displayOnObject(GameObject displayObject, GameObject targetObject, float distanceY)
     {
         Vector3 target_pos = targetObject.transform.position;
@@ -24,6 +25,7 @@ public class VRCanvasHandler : MonoBehaviour
         displayObject.GetComponent<RectTransform>().eulerAngles = new Vector3(0, cameraRotationY, 0);
     }
 
+    //로테이션을 오브젝트에 맞춤
     public void displayOnObjectRotation(GameObject displayObject, GameObject targetObject, float distanceY)
     {
         Vector3 target_pos = targetObject.transform.position;

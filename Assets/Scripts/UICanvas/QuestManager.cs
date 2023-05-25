@@ -15,7 +15,7 @@ public class QuestManager : MonoBehaviour
     {
         VRCanvasHandler.Instance.displayFrontOfPlayer(questBox, 4f, 0, 0);
 
-        if ( ControllerInputManager.Instance.RightSecondaryButtonPressed())
+        if ( ControllerInputManager.Instance.SecondaryButtonPressed())
         {
             ShowPanel();
         }

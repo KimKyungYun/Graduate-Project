@@ -16,6 +16,7 @@ public class SceneHandler : MonoBehaviour
     public float fadeTime;
 
     private Image image;
+    private bool SceneLoading = false;
     void Start()
     {
         image = fadeBox.GetComponent<Image>();
@@ -28,6 +29,12 @@ public class SceneHandler : MonoBehaviour
         {
             SwitchSceneToScifi();
         }
+
+
+        if (SceneLoading)
+        {
+            VRCanvasHandler.Instance.displayFrontOfPlayer(fadeBox, 0.5f);
+        }
     }
     public void SwitchSceneToScifi()
     {
@@ -35,20 +42,33 @@ public class SceneHandler : MonoBehaviour
     }
     public IEnumerator _SwitchSceneToScifi()
     {
-        VRCanvasHandler.Instance.displayFrontOfPlayer(fadeBox, 0.5f);
+        SceneLoading = true;
+        GameObject[] xRController = GameObject.FindGameObjectsWithTag("GameController");
+        //컨트롤러 비활성화
+        foreach (GameObject gameObject in xRController)
+        {
+            gameObject.GetComponent<XRController>().enabled = false;
+        }
+        
         StartCoroutine(fade(0, 1, fadeTime));
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("sci-fi");
         yield return new WaitForSeconds(1.0f);
 
         //기존 리스폰 위치 위치 
-        //Vector3 respwanPosition = new Vector3(-10.4f, 1.284f, -15f);
+        //Vector3 respwanPosition = new Vector3(-10.4f, 1.284f, -15f
 
         //디버깅용 리스폰
         Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
         XRPlayer.transform.position = respwanPosition;
-        VRCanvasHandler.Instance.displayFrontOfPlayer(fadeBox, 0.5f);
         StartCoroutine(fade(1, 0, fadeTime));
+
+        //컨트롤러 활성화
+        foreach (GameObject gameObject in xRController)
+        {
+            gameObject.GetComponent<XRController>().enabled = true;
+        }
+        SceneLoading = false;
     }
 
     private IEnumerator fade(float start, float end, float fadeTime)
@@ -68,4 +88,5 @@ public class SceneHandler : MonoBehaviour
             yield return null;
         }
     }
+
 }
