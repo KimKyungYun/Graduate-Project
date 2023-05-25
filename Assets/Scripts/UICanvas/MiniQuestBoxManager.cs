@@ -9,6 +9,7 @@ public class MiniQuestBoxManager : MonoBehaviour
 
     public TextMeshProUGUI QuestName;
     public GameObject miniQuestBox;
+    public AudioSource alarmAudio;
 
     private CanvasGroup canvasGroup;
     private bool visible = false;
@@ -43,11 +44,13 @@ public class MiniQuestBoxManager : MonoBehaviour
 
         if (updateEvent)
         {
+            alarmAudio.enabled = true;
             displayQuestBox();
             if (canvasGroup.alpha == 1)
             {
                 updateEvent = false;
                 hiddenQuestBox();
+                alarmAudio.enabled = false;
             }
         }
     }

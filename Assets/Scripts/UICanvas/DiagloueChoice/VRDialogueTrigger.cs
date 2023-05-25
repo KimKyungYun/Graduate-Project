@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class VRDialogueTrigger : MonoBehaviour
 {
     public DialogueManager DM;
+    public AudioSource dialogueAudio;
     public void OnSelectedEntered(SelectEnterEventArgs args)
     {
         GameObject NPCObject = args.interactableObject.transform.gameObject;
@@ -14,6 +15,7 @@ public class VRDialogueTrigger : MonoBehaviour
 
         if (dialogueByObject != null)
         {
+            dialogueAudio.Play();
             DM.DisplayDialogue(dialogueByObject, NPCObject);
         }
     }

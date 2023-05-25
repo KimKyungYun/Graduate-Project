@@ -10,7 +10,6 @@ public class step : MonoBehaviour
     {
         if (ControllerInputManager.Instance.LeftJoystickControlled())
         {
-            Debug.Log("LeftJoystic¡∂¿€¡ﬂ");
             footstepsSound.enabled = true;
         }
         else

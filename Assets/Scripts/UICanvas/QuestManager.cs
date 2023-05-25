@@ -17,7 +17,6 @@ public class QuestManager : MonoBehaviour
 
         if ( ControllerInputManager.Instance.RightSecondaryButtonPressed())
         {
-            Debug.Log("Secondary Button Pressed");
             ShowPanel();
         }
 

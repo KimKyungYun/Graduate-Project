@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         makeSingleTon();
-        presentGamePhase = gamePhaseList[0];
-        //setGamePhase(gamePhaseList[0].phaseName);
+        //presentGamePhase = gamePhaseList[0];
+        setGamePhase(gamePhaseList[0].phaseName);
     }
 
     void Start()
