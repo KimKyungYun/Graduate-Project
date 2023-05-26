@@ -43,13 +43,8 @@ public class SceneHandler : MonoBehaviour
     public IEnumerator _SwitchSceneToScifi()
     {
         SceneLoading = true;
-        GameObject[] xRController = GameObject.FindGameObjectsWithTag("GameController");
-        //컨트롤러 비활성화
-        foreach (GameObject gameObject in xRController)
-        {
-            gameObject.GetComponent<XRController>().enabled = false;
-        }
-        
+        ActivateController(false);
+
         StartCoroutine(fade(0, 1, fadeTime));
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("sci-fi");
@@ -62,12 +57,9 @@ public class SceneHandler : MonoBehaviour
         Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
         XRPlayer.transform.position = respwanPosition;
         StartCoroutine(fade(1, 0, fadeTime));
-
+        yield return new WaitForSeconds(0.3f);
         //컨트롤러 활성화
-        foreach (GameObject gameObject in xRController)
-        {
-            gameObject.GetComponent<XRController>().enabled = true;
-        }
+        ActivateController(true);
         SceneLoading = false;
     }
 
@@ -88,5 +80,19 @@ public class SceneHandler : MonoBehaviour
             yield return null;
         }
     }
+
+    private void ActivateController(bool status)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<DeviceBasedContinuousMoveProvider>().enabled = status;
+        player.GetComponent<DeviceBasedSnapTurnProvider>().enabled = status;
+
+        GameObject[] xRController = GameObject.FindGameObjectsWithTag("GameController");
+        foreach (GameObject gameObject in xRController)
+        {
+            gameObject.GetComponent<XRController>().enabled = status;
+        }
+    }
+
 
 }
