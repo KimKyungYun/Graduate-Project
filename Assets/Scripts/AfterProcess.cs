@@ -9,7 +9,12 @@ public class AfterProcess : MonoBehaviour
     public GameObject target;
     public Material target_material;
 
+    public void FirstProcess(SelectEnterEventArgs args){
+        target_material.SetColor("_Color",target.GetComponent<Renderer>().material.color);
+        target.GetComponent<Renderer>().material=target_material;
+    }
+
     public void ChangeMaterial(SelectEnterEventArgs args){
-        target.GetComponent<SkinnedMeshRenderer> ().material=target_material;
+        target.GetComponent<Renderer>().material=target_material;
     }
 }
