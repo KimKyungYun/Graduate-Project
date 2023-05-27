@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PutFilament : MonoBehaviour
 {
@@ -32,6 +33,14 @@ public class PutFilament : MonoBehaviour
     
     void Update()
     {
+        if(GameManager.Instance.getPresentGamePhaseName()=="InsertFilament"){
+            gameObject.GetComponent<XRGrabInteractable>().enabled=true;
+        }
+        else{
+            gameObject.GetComponent<XRGrabInteractable>().enabled=false;
+
+        }
+        
         if(Vector3.Distance(printer.transform.position, transform.position)<=2.0f)
         {
             ChangeAlpha();

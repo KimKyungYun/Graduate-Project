@@ -11,14 +11,14 @@ public class AfterProcess : MonoBehaviour
     public GameObject door;
 
     public void FirstProcess(SelectEnterEventArgs args){
-        if(door.transform.position.y<0.5f){
+        if(door.transform.position.y<0.5f&&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"){
             target_material.SetColor("_Color",target.GetComponent<Renderer>().material.color);
             target.GetComponent<Renderer>().material=target_material;
         }
     }
 
     public void ChangeMaterial(SelectEnterEventArgs args){
-        if(door.transform.position.y<0.5f){
+        if(door.transform.position.y<0.5f&&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"){
             target.GetComponent<Renderer>().material=target_material;
         }
 

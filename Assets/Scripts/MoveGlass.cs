@@ -9,7 +9,7 @@ public class MoveGlass : MonoBehaviour
     public GameObject glass;
     public float low=0;
     public int high=2;
-    public bool isOpen=true;
+    public bool isOpen=false;
 
     public void ButtonClick (SelectEnterEventArgs args){
         if(isOpen){
@@ -23,10 +23,10 @@ public class MoveGlass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(glass.transform.position.y<high&&!isOpen){
+        if(glass.transform.position.y<high&&isOpen){
             glass.transform.Translate(Vector3.up * Time.deltaTime);
         }
-        else if(glass.transform.position.y>=low&&isOpen){
+        else if(glass.transform.position.y>=low&&!isOpen){
             glass.transform.Translate(Vector3.down * Time.deltaTime);
         }
     }
