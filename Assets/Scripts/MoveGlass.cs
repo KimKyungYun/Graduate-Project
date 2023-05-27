@@ -9,7 +9,7 @@ public class MoveGlass : MonoBehaviour
     public GameObject glass;
     public float low=0;
     public int high=2;
-    public bool isOpen=false;
+    public bool isOpen=true;
 
     public void ButtonClick (SelectEnterEventArgs args){
         if(isOpen){

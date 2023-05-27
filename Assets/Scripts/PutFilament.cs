@@ -25,7 +25,7 @@ public class PutFilament : MonoBehaviour
         Color objectColor = new Color(oldColor.r, oldColor.g, oldColor.b, 0);
         printer.GetComponent<Renderer>().material.SetColor("_Color", newColor);
         line.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-        print_object.GetComponent<SkinnedMeshRenderer>().material.SetColor("_Color", objectColor);
+        print_object.GetComponent<Renderer>().material.SetColor("_Color", objectColor);
     }
     
     void Update()
