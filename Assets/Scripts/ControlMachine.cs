@@ -15,11 +15,12 @@ public class ControlMachine : MonoBehaviour
         if (presentMachine.name.Equals("Delta"))
         {
             presentMachine.GetComponent<DeltaXYZ>().enabled = true;
-            presentMachine.GetComponent<Fade>().visible= true;
         }
         else
         {
             presentMachine.GetComponent<CartesianXYZ>().enabled = true;
+            presentMachine.GetComponent<Fade>().visible= true;
+
         }
 
         gameObject.SetActive(false);

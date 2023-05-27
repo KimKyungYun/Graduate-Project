@@ -6,7 +6,8 @@ public class PutFilament : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject printer;
-    public GameObject line;
+    public GameObject line_top;
+    public GameObject line_bottom;
     public GameObject print_object;
     private Vector3 firstLocation;
     private Vector3 angle;
@@ -24,13 +25,14 @@ public class PutFilament : MonoBehaviour
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, 1);
         Color objectColor = new Color(oldColor.r, oldColor.g, oldColor.b, 0);
         printer.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-        line.GetComponent<Renderer>().material.SetColor("_Color", newColor);
+        line_top.GetComponent<Renderer>().material.SetColor("_Color", newColor);
+        line_bottom.GetComponent<Renderer>().material.SetColor("_Color", newColor);
         print_object.GetComponent<Renderer>().material.SetColor("_Color", objectColor);
     }
     
     void Update()
     {
-        if(Vector3.Distance(printer.transform.position, transform.position)<=1.0f)
+        if(Vector3.Distance(printer.transform.position, transform.position)<=2.0f)
         {
             ChangeAlpha();
             transform.position=firstLocation;

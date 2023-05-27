@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
         return presentGamePhase;
     }
 
+    public string getPresentGamePhaseName()
+    {
+        return presentGamePhase.phaseName;
+    }
+    
     public void setGamePhase(string gamePhase) 
     {
         foreach(GamePhase gp in gamePhaseList)
@@ -41,11 +46,14 @@ public class GameManager : MonoBehaviour
             if (gp.phaseName.Equals(gamePhase))
             { 
                 presentGamePhase = gp;
-                GamePhaseChange.Invoke();
+                if (gp.miniQuestText != "") GamePhaseChange.Invoke();
+                return;
             }
         }
-    }
 
+        throw new ArgumentException("해당 gamePhase의 이름이 존재하지 않습니다.");
+    }
+    
     private void makeSingleTon()
     {
         if (Instance != null) Destroy(this.gameObject);
