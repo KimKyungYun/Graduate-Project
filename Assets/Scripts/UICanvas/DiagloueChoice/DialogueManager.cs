@@ -128,6 +128,12 @@ public class DialogueManager : MonoBehaviour
         index = 0;
         DialogueText.text = dialogue.DialogueTextList[index];
         isChoiceMode = false;
+
+        if(dialogue.DialogueTextList.Length == 1 && dialogue.choiceSubject != "") 
+        {
+            displayChoiceBox();
+            isChoiceMode= true;
+        }
     }
 
     private void getNpcCam(GameObject NPCObj, float NPC_Height)
