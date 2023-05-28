@@ -11,9 +11,13 @@ public class AfterProcess : MonoBehaviour
     public GameObject door;
     public GameObject door_button;
     public int delay_time=5;
+    public bool onProgress=false;
+
 // &&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"
     public void FirstProcess(SelectEnterEventArgs args){
         if(door.transform.position.y<0.5f){
+            gameObject.GetComponents<AudioSource>()[0].Play();
+            gameObject.GetComponents<AudioSource>()[1].Play();
             target_material.SetColor("_Color",target.GetComponent<Renderer>().material.color);
             target.GetComponent<Renderer>().material=target_material;
             BlockOpen();
@@ -23,6 +27,8 @@ public class AfterProcess : MonoBehaviour
 // &&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"
     public void ChangeMaterial(SelectEnterEventArgs args){
         if(door.transform.position.y<0.5f){
+            gameObject.GetComponents<AudioSource>()[0].Play();
+            gameObject.GetComponents<AudioSource>()[1].Play();
             target.GetComponent<Renderer>().material=target_material;
             BlockOpen();
             Invoke("FreeOpen", delay_time);
@@ -30,9 +36,12 @@ public class AfterProcess : MonoBehaviour
 
     }
     public void BlockOpen(){
+        onProgress=true;
         door_button.GetComponent<MoveGlass>().enabled=false;
     }
+
     public void FreeOpen(){
+        onProgress=false;
         door_button.GetComponent<MoveGlass>().enabled=true;
     }
 }

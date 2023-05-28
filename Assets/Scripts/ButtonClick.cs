@@ -5,17 +5,21 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonClick : MonoBehaviour
 {
-    public GameObject button;
+    public GameObject display;
+    public GameObject glass;
     public float degree=0.1f;
     
 
     // Update is called once per frame
     public void Push(SelectEnterEventArgs args)
     {
-        button.transform.Translate(Vector3.down*degree);
+        transform.Translate(Vector3.down*degree);
+        if(!display.GetComponent<AfterProcess>().onProgress){
+            glass.GetComponent<AudioSource>().Play();
+        }
     }
     public void Pull(SelectExitEventArgs args)
     {
-        button.transform.Translate(Vector3.up*degree);
+        transform.Translate(Vector3.up*degree);
     }
 }
