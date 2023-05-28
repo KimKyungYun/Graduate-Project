@@ -47172,9 +47172,14 @@ MonoBehaviour:
     miniQuestText: "\uB9B4\uB9AC\uC5D0\uAC8C \uB2E4\uC2DC \uB9D0\uC744 \uAC78\uC5B4\uBCF4\uC790"
   - phaseName: InsertFilament
     miniQuestText: "\uD544\uB77C\uBA58\uD2B8\uB97C \uD504\uB9B0\uD130\uC5D0 \uC7A5\uCC29\uD558\uC790"
+  - phaseName: GcodeExplanation
+    miniQuestText: "\uB9B4\uB9AC\uC5D0\uAC8C G-code\uC5D0 \uB300\uD55C \uC124\uBA85\uC744
+      \uB4E3\uC790"
   - phaseName: GcodeDetail
     miniQuestText: "\uB9B4\uB9AC\uC5D0\uAC8C G-code\uC5D0 \uB300\uD55C \uC124\uBA85\uC744
       \uB4E3\uC790"
+  - phaseName: GcodeClear
+    miniQuestText: "\uB9B4\uB9AC\uC5D0\uAC8C \uB2E4\uC2DC \uB9D0\uC744 \uAC78\uC790"
 --- !u!4 &1854092556
 Transform:
   m_ObjectHideFlags: 0

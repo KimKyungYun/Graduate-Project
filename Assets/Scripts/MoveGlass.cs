@@ -14,9 +14,12 @@ public class MoveGlass : MonoBehaviour
     public void ButtonClick (SelectEnterEventArgs args){
         if(isOpen){
             isOpen=false;
+            glass.GetComponent<AudioSource>().Play();
+
         }
         else{
             isOpen=true;
+            glass.GetComponent<AudioSource>().Play();
         }
     }
 

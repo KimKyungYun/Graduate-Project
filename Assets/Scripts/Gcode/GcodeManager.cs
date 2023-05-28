@@ -92,7 +92,7 @@ public class GcodeManager : MonoBehaviour
                 effectManager.deactivateMainCanvas();
                 effectManager.activeEffectCanvas();
 
-                //GameManager.Instance.setGamePhase("ClearGcode");
+                GameManager.Instance.setGamePhase("GcodeClear");
                 moveToScifiScene();
                 return;
             }

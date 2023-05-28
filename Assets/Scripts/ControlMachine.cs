@@ -35,7 +35,6 @@ public class ControlMachine : MonoBehaviour
         else
         {
             presentMachine.GetComponent<CartesianXYZ>().enabled = false;
-            presentMachine.GetComponent<Fade>().visible= false;
 
         }
         gameObject.SetActive(false);
