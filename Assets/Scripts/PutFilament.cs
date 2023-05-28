@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using ModularExtrusionsMachines;
 
 public class PutFilament : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject printer;
+    public GameObject printer_filament;
     public GameObject line_top;
     public GameObject line_bottom;
     public GameObject print_object;
@@ -25,7 +27,7 @@ public class PutFilament : MonoBehaviour
         Color oldColor = GetComponent<Renderer>().material.color;        
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, 1);
         Color objectColor = new Color(oldColor.r, oldColor.g, oldColor.b, 0);
-        printer.GetComponent<Renderer>().material.SetColor("_Color", newColor);
+        printer_filament.GetComponent<Renderer>().material.SetColor("_Color", newColor);
         line_top.GetComponent<Renderer>().material.SetColor("_Color", newColor);
         line_bottom.GetComponent<Renderer>().material.SetColor("_Color", newColor);
         print_object.GetComponent<Renderer>().material.SetColor("_Color", objectColor);
@@ -33,7 +35,7 @@ public class PutFilament : MonoBehaviour
     
     void Update()
     {
-        if(Vector3.Distance(printer.transform.position, transform.position)<=2.0f)
+        if(Vector3.Distance(printer_filament.transform.position, transform.position)<=2.0f&&printer.GetComponent<CartesianXYZ>().enabled == false)
         {
             ChangeAlpha();
             transform.position=firstLocation;

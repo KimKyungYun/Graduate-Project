@@ -3946,7 +3946,8 @@ MonoBehaviour:
   dialogue:
     DialogueTextList:
     - "\uC5B4 \uBC18\uAC00\uC6CC \uC88B\uC740\uC544\uCE68\uC774\uB124"
-    - "\uD56D\uACF5\uD559\uC5D0\uC11C \uC758\uB8B0\uAC00 \uB4E4\uC5B4\uC654\uC5B4"
+    - "\uD56D\uACF5\uAE30\uC220\uC5F0\uAD6C\uC6D0\uC5D0\uC11C \uC758\uB8B0\uAC00
+      \uB4E4\uC5B4\uC654\uC5B4"
     - "\uBE44\uD589\uAE30 \uC5D4\uC9C4\uBAA8\uD615\uC774 \uD544\uC694\uD55C \uAC83
       \uAC19\uB358\uB370 \uB9CC\uB4E4\uC5B4\uC904 \uC218 \uC788\uACA0\uB098?"
     changePhase: 
@@ -20659,7 +20660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "#1 \uC2EC\uC7A5\uBAA8\uD615"
+  m_text: "\uD56D\uACF5\uAE30 \uC5D4\uC9C4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d77bfd5525dcb644ebbc2087ca5ae652, type: 2}
   m_sharedMaterial: {fileID: 2994448631926838123, guid: d77bfd5525dcb644ebbc2087ca5ae652, type: 2}
@@ -24440,8 +24441,8 @@ MonoBehaviour:
       \uC788\uACE0, \uB098\uBA38\uC9C0 \uBD80\uBD84\uC5D0 \uB300\uD55C \uC124\uACC4\uB97C
       \uC9C4\uD589\uD574\uC57C\uD574.."
     - "\uC790\uC138\uD55C \uC0AC\uD56D\uC740 \uC5EC\uAE30 \uC774 \uBA85\uC138\uC11C\uC5D0
-      \uC801\uD600\uC788\uC73C\uB2C8 \uC591\uCABD \uCEE8\uD2B8\uB864\uB7EC\uC758
-      \uC704\uCABD \uBC84\uD2BC\uC744 \uB20C\uB7EC\uBCF4\uBA74 \uC138\uBD80\uC0AC\uD56D\uC744
+      \uC801\uD600\uC788\uC73C\uB2C8 <color=#ff7777>\uC591\uCABD \uCEE8\uD2B8\uB864\uB7EC\uC758
+      \uC704\uCABD \uBC84\uD2BC</color>\uC744 \uB20C\uB7EC\uBCF4\uBA74 \uC138\uBD80\uC0AC\uD56D\uC744
       \uC54C \uC218 \uC788\uC744\uAC70\uC57C."
     - "\uB098\uBA38\uC9C0 \uCD9C\uB825\uC5D0 \uB300\uD55C \uC124\uBA85\uC740 \uD504\uB9B0\uD130\uC2E4\uC5D0
       \uC788\uB294 \uD3F4\uC5D0\uAC8C \uAC00\uBCF4\uBA74 \uC124\uBA85\uD574\uC904\uAC70\uC57C."
@@ -39806,18 +39807,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC758\uB8B0\uC790 : \uAE40\uC8FC\uD76C \uAD50\uC218\r\n\uC758\uB8B0 \uAE30\uAD00/\uC18C\uC18D
-    : \uD55C\uAD6D\uB300\uD559\uAD50 \uC758\uD559\uBD80\r\n\uC5F0\uB77D\uCC98 : 010-1234-4321\r\n\r\n\uC548\uB155\uD558\uC2ED\uB2C8\uAE4C!\r\n\r\n\uC774\uBC88
-    \uD559\uAE30 \uD559\uBD80\uC0DD\uB4E4\uC744 \uB300\uC0C1\uC73C\uB85C \uC9C4\uD589\uD558\uB294
-    \uC218\uC5C5\uC5D0\uC11C \uC2EC\uC7A5\uC5D0 \uB300\uD55C \uC218\uC220 \uC2E4\uC2B5\uC744
-    \uC9C4\uD589\uD558\uB824 \uD569\uB2C8\uB2E4.\r\n\uC2E4\uC2B5\uC740 \uC2EC\uC7A5\uC758
-    \uC808\uB2E8, \uBD09\uD569 \uB4F1 \uC2E4\uC81C \uC2EC\uC7A5 \uC218\uC220\uC744
-    \uC775\uD790 \uC218 \uC788\uB3C4\uB85D \uC9C4\uD589\uB429\uB2C8\uB2E4.\r\n\uB530\uB77C\uC11C
-    \uC2E4\uC81C \uC2EC\uC7A5\uACFC \uCD5C\uB300\uD55C \uC720\uC0AC\uD558\uB3C4\uB85D
-    3D\uD504\uB9B0\uD305 \uD558\uC5EC \uC800\uD76C\uC5D0\uAC8C \uC0D8\uD50C\uC744
-    \uBCF4\uB0B4\uC8FC\uC2DC\uAE30 \uBC14\uB78D\uB2C8\uB2E4.\r\n\uACB0\uACFC\uC5D0
-    \uB530\uB77C\uC11C \uCD94\uAC00\uC801\uC778 \uC694\uCCAD\uC0AC\uD56D\uC774\uB098
-    \uC9C0\uBD88\uC5D0 \uB300\uD574 \uC548\uB0B4\uD574 \uB4DC\uB9AC\uACA0\uC2B5\uB2C8\uB2E4.\r\n\r\n\uAC10\uC0AC\uD569\uB2C8\uB2E4.\r\n"
+  m_text: "\uC758\uB8B0\uC790 : \uAE40\uC8FC\uD76C \uD300\uC7A5\n\uC758\uB8B0 \uAE30\uAD00/\uC18C\uC18D
+    : \uD55C\uAD6D\uD56D\uACF5\uC5F0\uAD6C\r\uC6D0\n\uC5F0\uB77D\uCC98 : 010-1234-4321\r\n\r\n\uC548\uB155\uD558\uC2ED\uB2C8\uAE4C!\r\r\n\uC774\uBC88\uC5D0
+    \uC0C8\uB85C\uC6B4 \uC5D4\uC9C4\uC81C\uC791 \uD504\uB85C\uC81D\uD2B8\uC5D0 \uB4E4\uC5B4\uAC00\uAC8C
+    \uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uB54C\uBB38\uC5D0 \uD574\uB2F9 \uC5D4\uC9C4\uC758
+    \uD504\uB85C\uD1A0\uD0C0\uC785\n\uBC84\uC804\uC744 3D\uD504\uB9B0\uD130\uB85C
+    \uC81C\uC791\uD558\uC5EC \uC2DC\uD5D8 \uC6B4\uD589 \uD558\uACE0\uC790 \uACB0\uC815\uD558\uAC8C
+    \uB418\uC5C8\uC2B5\uB2C8\uB2E4. \n\n\uC5D4\uC9C4\uC5D0 \uC0AC\uC6A9\uB418\uBBC0\uB85C,
+    <color=#ff7777>\uAC15\uB3C4\uAC00 \uAC00\uC7A5 \uB192\uC740 \uC18C\uC7AC\uB85C 
+    \uC81C\uC791 \uBD80\uD0C1\uB4DC\uB9BD\uB2C8\uB2E4.</color> \uADF8\uB9AC\uACE0
+    \uC0C9\uC0C1\uC740 <color=#ff7777>\uC5B4\uB450\uC6B4 \uACC4\uC5F4</color>\uB85C
+    \uBD80\uD0C1\uB4DC\uB9AC\uACE0, <color=#ff7777>\uB300\uD615 \uC5D4\uC9C4</color>
+    \uC778\uB9CC\uD07C \uC6B4\uBC18\uC5D0 \n\uC8FC\uC758\uD558\uC5EC \uC8FC\uC2DC\uAE38
+    \uBD80\uD0C1\uB4DC\uB9BD\uB2C8\uB2E4.\n\n\uAC10\uC0AC\uD569\uB2C8\uB2E4.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d77bfd5525dcb644ebbc2087ca5ae652, type: 2}
   m_sharedMaterial: {fileID: 2994448631926838123, guid: d77bfd5525dcb644ebbc2087ca5ae652, type: 2}
@@ -40250,7 +40252,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2092816755}
   - {fileID: 746352704}
   - {fileID: 1991888992}
   m_Father: {fileID: 1370853386}
@@ -46771,80 +46772,6 @@ Transform:
   m_Father: {fileID: 331204767}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1838341845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1838341846}
-  - component: {fileID: 1838341847}
-  m_Layer: 0
-  m_Name: Beginning
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1838341846
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838341845}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2092816755}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1838341847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838341845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ed861476d01b042ae5419b910e3c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCName: YoonSu
-  NPC_Height: 1.5
-  dialogue:
-    DialogueTextList:
-    - "\uD558\uC774"
-    - "\uBC29\uAC00\uBC29\uAC00"
-    changePhase: 
-    choiceSubject: "\uBB50\uB77C\uACE0 \uB300\uB2F5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C"
-    ChoiceOptionList:
-    - ChoiceText: "\u3132\u3148"
-      dialogue:
-        DialogueTextList:
-        - "\uBB34\uC2A8\uB9D0\uBC84\uB987\uC774\uACE0"
-        changePhase: 
-        choiceSubject: 
-        ChoiceOptionList: []
-    - ChoiceText: "\uBC29\uAC00\uC6CC"
-      dialogue:
-        DialogueTextList:
-        - "\uBC29\uAC00\uC6CC2"
-        changePhase: 
-        choiceSubject: 
-        ChoiceOptionList: []
-    - ChoiceText: "\u314E\u3147\uC694"
-      dialogue:
-        DialogueTextList:
-        - "\u314E\u3147\uC6942"
-        changePhase: 
-        choiceSubject: 
-        ChoiceOptionList: []
 --- !u!1 &1839503072
 GameObject:
   m_ObjectHideFlags: 0
@@ -53513,58 +53440,6 @@ Transform:
   m_Father: {fileID: 845632804}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2087140559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2087140560}
-  - component: {fileID: 2087140561}
-  m_Layer: 0
-  m_Name: AfterMeetJeremy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2087140560
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087140559}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2092816755}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2087140561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087140559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ed861476d01b042ae5419b910e3c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCName: YoonSu
-  NPC_Height: 1.5
-  dialogue:
-    DialogueTextList:
-    - "\uC5B4 \uC81C\uB808\uBBF8 \uB9CC\uB098\uACE0\uC654\uB2C8?"
-    changePhase: 
-    choiceSubject: 
-    ChoiceOptionList: []
 --- !u!1 &2087888460
 GameObject:
   m_ObjectHideFlags: 0
@@ -53723,39 +53598,6 @@ Transform:
   m_Children:
   - {fileID: 1238684850}
   m_Father: {fileID: 925679426}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2092816754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2092816755}
-  m_Layer: 0
-  m_Name: DialogueData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2092816755
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2092816754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1838341846}
-  - {fileID: 2087140560}
-  m_Father: {fileID: 1570034820}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2093610445

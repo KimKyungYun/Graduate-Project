@@ -28,6 +28,16 @@ public class ControlMachine : MonoBehaviour
 
     public void controlOff()
     {
+        if (presentMachine.name.Equals("Delta"))
+        {
+            presentMachine.GetComponent<DeltaXYZ>().enabled = false;
+        }
+        else
+        {
+            presentMachine.GetComponent<CartesianXYZ>().enabled = false;
+            presentMachine.GetComponent<Fade>().visible= false;
+
+        }
         gameObject.SetActive(false);
     }
 
