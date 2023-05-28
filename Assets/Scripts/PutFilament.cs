@@ -33,14 +33,6 @@ public class PutFilament : MonoBehaviour
     
     void Update()
     {
-        if(GameManager.Instance.getPresentGamePhaseName()=="InsertFilament"){
-            gameObject.GetComponent<XRGrabInteractable>().enabled=true;
-        }
-        else{
-            gameObject.GetComponent<XRGrabInteractable>().enabled=false;
-
-        }
-        
         if(Vector3.Distance(printer.transform.position, transform.position)<=2.0f)
         {
             ChangeAlpha();
@@ -48,6 +40,14 @@ public class PutFilament : MonoBehaviour
             transform.eulerAngles=angle;
         }
 
+    }
+    public void Grab(HoverEnterEventArgs args){
+        if(GameManager.Instance.getPresentGamePhaseName()=="InsertFilament"){
+            gameObject.GetComponent<XRGrabInteractable>().enabled=true;
+        }
+        else{
+            gameObject.GetComponent<XRGrabInteractable>().enabled=false;
+        }
     }
 }
 //gameobject.SetActive 활성 비활성

@@ -13,7 +13,7 @@ public class Combine : MonoBehaviour
     void Update()
     {
         if(print_target.GetComponent<Renderer>().material.color.a==1){
-            print_target.GetComponent<XRGrabInteractable>().enabled=true;
+            GetComponent<XRGrabInteractable>().enabled=true;
         }
         else{
             gameObject.transform.position=new Vector3(bottom.transform.position.x,gameObject.transform.position.y ,bottom.transform.position.z);
