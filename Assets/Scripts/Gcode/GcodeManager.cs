@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -26,14 +27,14 @@ public class GcodeManager : MonoBehaviour
 
     private void Start()
     {
-        questionData[0] = new QuestionData(3, "³ëÁñÀÇ ¿Âµµ¸¦ 210µµ·Î ¼³Á¤ÇÏ¼¼¿ä!", "S210", "G0", "G28", "M104", "M140", "M2", "M107", "T0", "T2");
-        questionData[1] = new QuestionData(7, "³ëÁñÀÇ ¿Âµµ°¡ 210µµ¿¡ µµ´ŞÇÒ ¶§±îÁö ±â´Ù¸®¼¼¿ä.", "S210", "G0", "G1", "G2", "G3", "M2", "M107", "M109", "T2");
-        questionData[2] = new QuestionData(6, "¿­À» ½ÄÈú Äğ·¯ÀÇ ¼Óµµ¸¦ ÃÖ´ë·Î ¼³Á¤ÇÏ¼¼¿ä!", "S255", "G0", "G1", "G2", "M2", "M104", "M106", "M107", "T2");
-        questionData[3] = new QuestionData(6, "¿øÀ» ±×¸®±â À§ÇØ Àı´ë ÁÂÇ¥ ¸ğµå¸¦ È°¼ºÈ­ ÇÏ¼¼¿ä.", "", "G0", "G1", "G2", "G3", "G4", "G90", "G91", "G92");
-        questionData[4] = new QuestionData(1, "¹İÁö¸§ 30CM ÀÎ ¿øÀ» ±×¸®±â À§ÇØ ¿øÁ¡¿¡¼­ YÃàÀ¸·Î 30CM ÀÌµ¿ÇÏ¼¼¿ä.", "X0 Y300", "G0", "G1", "G2", "G3", "M2", "M107", "T0", "T2");
-        questionData[5] = new QuestionData(3, "ÀÌÁ¦ ¿øÀ» ±×¸®¼¼¿ä!", "X0 Y300 I0 J-300", "G0", "G1", "G2", "G3", "G4", "G20", "T0", "T2");
-        questionData[6] = new QuestionData(6, "ÀÛ¾÷ÀÌ ³¡³µ½À´Ï´Ù. ¿øÁ¡À¸·Î ÀÌµ¿ÇÏ¼¼¿ä.", "", "G0", "G1", "G2", "G3", "G20", "G28", "T0", "T2");
-        questionData[7] = new QuestionData(6, "Äğ·¯¸¦ ²ô¼¼¿ä.", "", "G0", "G28", "M104", "M140", "M2", "M107", "T0", "T2");
+        questionData[0] = new QuestionData(3, "ë…¸ì¦ì˜ ì˜¨ë„ë¥¼ 210ë„ë¡œ ì„¤ì •í•˜ì„¸ìš”!", "S210", "G0", "G28", "M104", "M140", "M2", "M107", "T0", "T2");
+        questionData[1] = new QuestionData(7, "ë…¸ì¦ì˜ ì˜¨ë„ê°€ 210ë„ì— ë„ë‹¬í•  ë•Œê¹Œì§€ ê¸°ë‹¤ë¦¬ì„¸ìš”.", "S210", "G0", "G1", "G2", "G3", "M2", "M107", "M109", "T2");
+        questionData[2] = new QuestionData(6, "ì—´ì„ ì‹í ì¿¨ëŸ¬ì˜ ì†ë„ë¥¼ ìµœëŒ€ë¡œ ì„¤ì •í•˜ì„¸ìš”!", "S255", "G0", "G1", "G2", "M2", "M104", "M106", "M107", "T2");
+        questionData[3] = new QuestionData(6, "ì›ì„ ê·¸ë¦¬ê¸° ìœ„í•´ ì ˆëŒ€ ì¢Œí‘œ ëª¨ë“œë¥¼ í™œì„±í™” í•˜ì„¸ìš”.", "", "G0", "G1", "G2", "G3", "G4", "G90", "G91", "G92");
+        questionData[4] = new QuestionData(1, "ë°˜ì§€ë¦„ 30CM ì¸ ì›ì„ ê·¸ë¦¬ê¸° ìœ„í•´ ì›ì ì—ì„œ Yì¶•ìœ¼ë¡œ 30CM ì´ë™í•˜ì„¸ìš”.", "X0 Y300", "G0", "G1", "G2", "G3", "M2", "M107", "T0", "T2");
+        questionData[5] = new QuestionData(3, "ì´ì œ ì›ì„ ê·¸ë¦¬ì„¸ìš”!", "X0 Y300 I0 J-300", "G0", "G1", "G2", "G3", "G4", "G20", "T0", "T2");
+        questionData[6] = new QuestionData(6, "ì‘ì—…ì´ ëë‚¬ìŠµë‹ˆë‹¤. ì›ì ìœ¼ë¡œ ì´ë™í•˜ì„¸ìš”.", "", "G0", "G1", "G2", "G3", "G20", "G28", "T0", "T2");
+        questionData[7] = new QuestionData(6, "ì¿¨ëŸ¬ë¥¼ ë„ì„¸ìš”.", "", "G0", "G28", "M104", "M140", "M2", "M107", "T0", "T2");
 
         initQuestion();
     }
@@ -61,7 +62,7 @@ public class GcodeManager : MonoBehaviour
         SelectedOption.GetComponent<RectTransform>().position = OriginalPos;
     }
 
-    //¼±ÅÃÁö ¿ÀºêÁ§Æ® ÀÌ¸§À¸·Î ¹®ÀÚ¿­ ÆÄ½ÌÇÏ°í checkAnswer·Î ³Ñ°ÜÁÜ.
+    //ì„ íƒì§€ ì˜¤ë¸Œì íŠ¸ ì´ë¦„ìœ¼ë¡œ ë¬¸ìì—´ íŒŒì‹±í•˜ê³  checkAnswerë¡œ ë„˜ê²¨ì¤Œ.
     public void checkAnswerBridge()
     {
         if(SelectedOption != null)
@@ -90,6 +91,9 @@ public class GcodeManager : MonoBehaviour
                 soundManager.playAllClearSound();
                 effectManager.deactivateMainCanvas();
                 effectManager.activeEffectCanvas();
+
+                //GameManager.Instance.setGamePhase("ClearGcode");
+                moveToScifiScene();
                 return;
             }
 
@@ -100,15 +104,19 @@ public class GcodeManager : MonoBehaviour
             initQuestion();
         }
 
-        else // Æ²·Ç´Ù´Â »ç¿îµå + HP¹Ù ±ğÀÌ°Ô
+        else // í‹€ë ·ë‹¤ëŠ” ì‚¬ìš´ë“œ + HPë°” ê¹ì´ê²Œ
         {
             ProgressBarCircle progressBar = FindObjectOfType<ProgressBarCircle>();
             
-            if (progressBar.UpdateValue(-1) == 0) // progressBarÀÇ Health°¡ 0ÀÏ¶§
+            if (progressBar.UpdateValue(-1) == 0) // progressBarì˜ Healthê°€ 0ì¼ë•Œ
             {
                 effectManager.showFail();
-                Camera.main.GetComponent<AudioSource>().enabled= false;
+
+                GameObject origin = GameObject.Find("GcodeOrigin");
+                origin.GetComponentInChildren<AudioSource>().enabled = false;
                 soundManager.playFailSound();
+
+                moveToScifiScene();
             }
 
             soundManager.playWrongAnswerSound();
@@ -126,5 +134,16 @@ public class GcodeManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    public void moveToScifiScene()
+    {
+        StartCoroutine(_moveTOScifiScene());
+    }
+
+    public IEnumerator _moveTOScifiScene()
+    {
+        yield return new WaitForSeconds(5.0f);
+        SceneManager.LoadScene("sci-fi");
     }
 }

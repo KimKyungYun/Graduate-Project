@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -35,7 +36,10 @@ public class SoundManager : MonoBehaviour
 
     public void playAllClearSound()
     {
-        Camera.main.GetComponent<AudioSource>().enabled= false;
+        GameObject origin = GameObject.Find("GcodeOrigin");
+        origin.GetComponentInChildren<AudioSource>().enabled = false;
+
+        //Camera.main.GetComponent<AudioSource>().enabled= false;
         audioSource.PlayOneShot(AllClearSound);
     }
 

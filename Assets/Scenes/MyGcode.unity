@@ -11004,7 +11004,7 @@ GameObject:
   - component: {fileID: 501104126}
   - component: {fileID: 501104125}
   m_Layer: 0
-  m_Name: XR Origin
+  m_Name: GcodeOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
