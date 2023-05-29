@@ -10,9 +10,15 @@ public class GameOver : MonoBehaviour
     {
         if(GameManager.Instance.getPresentGamePhaseName()=="TheEnd"){
             Invoke("GoBack",5);
+            Invoke("deactiveCanvas", 4.5f);
         }
     }
     public void GoBack(){
         SceneManager.LoadScene("MainMenu");
-    }    
+    }
+    
+    private void deactiveCanvas()
+    {
+        Destroy(GameObject.Find("Canvas"));
+    }
 }

@@ -24,9 +24,12 @@ public class GameManager : MonoBehaviour
         setGamePhase(gamePhaseList[0].phaseName);
     }
 
-    void Start()
+    private void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            setGamePhase("MergeEngine");
+        }
     }
 
     public GamePhase getPresentGamePhase()

@@ -24907,6 +24907,7 @@ GameObject:
   - component: {fileID: 994820614}
   - component: {fileID: 994820615}
   - component: {fileID: 994820616}
+  - component: {fileID: 994820617}
   m_Layer: 6
   m_Name: XR Origin
   m_TagString: Player
@@ -25155,6 +25156,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepsSound: {fileID: 994820615}
+--- !u!114 &994820617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994820605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257202a50c4fb7e449d7f5978a076c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &999181183
 GameObject:
   m_ObjectHideFlags: 0

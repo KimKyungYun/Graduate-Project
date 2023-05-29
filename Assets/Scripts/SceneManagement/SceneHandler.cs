@@ -103,7 +103,7 @@ public class SceneHandler : MonoBehaviour
         }
     }
 
-    private void ActivateController(bool status)
+    public void ActivateController(bool status)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<DeviceBasedContinuousMoveProvider>().enabled = status;
@@ -115,7 +115,6 @@ public class SceneHandler : MonoBehaviour
             gameObject.GetComponent<XRController>().enabled = status;
         }
     }
-
     private void makeSingleTon()
     {
         if (Instance != null) Destroy(this.gameObject);
