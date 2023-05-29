@@ -69,6 +69,9 @@ public class SceneHandler : MonoBehaviour
         //컨트롤러 활성화
         ActivateController(true);
         SceneLoading = false;
+
+        yield return new WaitForSeconds(5.0f);
+        fadeBox.SetActive(false);
     }
 
     public void SwitchGcodeToScifi()

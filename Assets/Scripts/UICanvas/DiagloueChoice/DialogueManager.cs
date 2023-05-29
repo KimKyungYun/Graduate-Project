@@ -21,6 +21,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject[] choiceBoxes;
     public TextMeshProUGUI[] ChoiceTexts;
 
+    public AudioClip selectSound;
+
     private GameObject NPCObj;
     private Dialogue dialogue; // 현재 대화
     private int index; // 다이얼로그 내 대화 인덱스
@@ -120,6 +122,7 @@ public class DialogueManager : MonoBehaviour
 
     public void GetDialogueByChoice(int SelectedNumber)
     {
+        GetComponent<AudioSource>().PlayOneShot(selectSound);
         //선택지창 지우기
         HiddenChoicePanel();
 
@@ -128,7 +131,7 @@ public class DialogueManager : MonoBehaviour
         index = 0;
         DialogueText.text = dialogue.DialogueTextList[index];
 
-        if(dialogue.choiceSubject!= "")
+        if(dialogue.choiceSubject!= "" && dialogue.DialogueTextList.Length == 1)
         {
             displayChoiceBox();
             isChoiceMode = true;
