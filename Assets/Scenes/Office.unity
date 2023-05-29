@@ -47202,6 +47202,8 @@ MonoBehaviour:
   - phaseName: MergeEngine
     miniQuestText: "\uC5D4\uC9C4 \uBAA8\uD615\uC744 \uC644\uC131\uC2DC\uD0A8 \uD6C4
       \uD3F4\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC790"
+  - phaseName: TheEnd
+    miniQuestText: "\uCD95\uD558\uD569\uB2C8\uB2E4! \uCCB4\uD5D8\uC744 \uC644\uB8CC\uD558\uC600\uC2B5\uB2C8\uB2E4."
 --- !u!4 &1854092556
 Transform:
   m_ObjectHideFlags: 0

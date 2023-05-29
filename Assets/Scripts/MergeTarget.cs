@@ -11,7 +11,7 @@ public class MergeTarget : MonoBehaviour
     public GameObject SwapTarget;
 
     void Update(){
-        if(Vector3.Distance(mergeTarget.transform.position, transform.position)<=0.5f&&GameManager.Instance.getPresentGamePhaseName()=="합치기페이즈")
+        if(Vector3.Distance(mergeTarget.transform.position, transform.position)<=0.5f&&GameManager.Instance.getPresentGamePhaseName()=="MergeEngine")
         {
             mergeTarget.GetComponent<AudioSource>().Play();
             removeTarget1.SetActive(false);
