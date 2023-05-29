@@ -93,7 +93,7 @@ public class GcodeManager : MonoBehaviour
                 effectManager.activeEffectCanvas();
 
                 GameManager.Instance.setGamePhase("GcodeClear");
-                moveToScifiScene();
+                SceneHandler.Instance.SwitchGcodeToScifi();
                 return;
             }
 
@@ -116,7 +116,7 @@ public class GcodeManager : MonoBehaviour
                 origin.GetComponentInChildren<AudioSource>().enabled = false;
                 soundManager.playFailSound();
 
-                moveToScifiScene();
+                SceneHandler.Instance.SwitchGcodeToScifi();
             }
 
             soundManager.playWrongAnswerSound();
@@ -134,16 +134,5 @@ public class GcodeManager : MonoBehaviour
         {
             Instance = this;
         }
-    }
-
-    public void moveToScifiScene()
-    {
-        StartCoroutine(_moveTOScifiScene());
-    }
-
-    public IEnumerator _moveTOScifiScene()
-    {
-        yield return new WaitForSeconds(5.0f);
-        SceneManager.LoadScene("sci-fi");
     }
 }

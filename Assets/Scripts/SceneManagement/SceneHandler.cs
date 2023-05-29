@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 using UnityEngine.Events;
+using Unity.XR.CoreUtils;
 
 public class SceneHandler : MonoBehaviour
 {
+    static public SceneHandler Instance;
+
     public GameObject XRPlayer;
     public GameObject fadeBox;
 
@@ -17,6 +20,11 @@ public class SceneHandler : MonoBehaviour
 
     private Image image;
     private bool SceneLoading = false;
+
+    private void Awake()
+    {
+        makeSingleTon();
+    }
     void Start()
     {
         image = fadeBox.GetComponent<Image>();
@@ -50,17 +58,31 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene("sci-fi");
         yield return new WaitForSeconds(1.0f);
 
-        //±âÁ¸ ¸®½ºÆù À§Ä¡ À§Ä¡ 
+        //ê¸°ì¡´ ë¦¬ìŠ¤í° ìœ„ì¹˜ ìœ„ì¹˜ 
         //Vector3 respwanPosition = new Vector3(-10.4f, 1.284f, -15f
 
-        //µğ¹ö±ë¿ë ¸®½ºÆù
+        //ë””ë²„ê¹…ìš© ë¦¬ìŠ¤í°
         Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
         XRPlayer.transform.position = respwanPosition;
         StartCoroutine(fade(1, 0, fadeTime));
         yield return new WaitForSeconds(0.3f);
-        //ÄÁÆ®·Ñ·¯ È°¼ºÈ­
+        //ì»¨íŠ¸ë¡¤ëŸ¬ í™œì„±í™”
         ActivateController(true);
         SceneLoading = false;
+    }
+
+    public void SwitchGcodeToScifi()
+    {
+        StartCoroutine(_SwitchGcodeToScifi());
+    }
+
+    private IEnumerator _SwitchGcodeToScifi()
+    {
+        yield return new WaitForSeconds(5.0f);
+        SceneManager.LoadScene("sci-fi");
+        Vector3 originalPos = XRPlayer.transform.position;
+        Vector3 respawnPos = new Vector3(originalPos.x, originalPos.y + 0.5f, originalPos.z);
+        XRPlayer.transform.position = respawnPos;
     }
 
     private IEnumerator fade(float start, float end, float fadeTime)
@@ -94,5 +116,12 @@ public class SceneHandler : MonoBehaviour
         }
     }
 
-
+    private void makeSingleTon()
+    {
+        if (Instance != null) Destroy(this.gameObject);
+        else
+        {
+            Instance = this;
+        }
+    }
 }

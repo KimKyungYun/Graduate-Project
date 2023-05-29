@@ -23,7 +23,7 @@ public class ControlMachine : MonoBehaviour
 
         }
 
-        gameObject.SetActive(false);
+        gameObject.transform.position=new Vector3(1000.0f,1000.0f,1000.0f);
     }
 
     public void controlOff()
@@ -37,7 +37,7 @@ public class ControlMachine : MonoBehaviour
             presentMachine.GetComponent<CartesianXYZ>().enabled = false;
 
         }
-        gameObject.SetActive(false);
+        gameObject.transform.position=new Vector3(1000.0f,1000.0f,1000.0f);
     }
 
     public void setPresentMachine(GameObject machine)

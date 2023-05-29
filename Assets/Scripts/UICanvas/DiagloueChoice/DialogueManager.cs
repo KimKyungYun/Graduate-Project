@@ -8,13 +8,13 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    //DialogueBox°ü·Ã UI º¯¼ö
+    //DialogueBoxê´€ë ¨ UI ë³€ìˆ˜
     public GameObject dialogueBox;
     public TextMeshProUGUI NPCName;
     public TextMeshProUGUI DialogueText;
     public GameObject NPCCam;
 
-    //ChoiceBox°ü·Ã UIº¯¼ö
+    //ChoiceBoxê´€ë ¨ UIë³€ìˆ˜
     public GameObject choiceBox;
     public GameObject go_ChoiceSubjectPanel;
     public TextMeshProUGUI ChoiceSubjectText;
@@ -22,11 +22,11 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI[] ChoiceTexts;
 
     private GameObject NPCObj;
-    private Dialogue dialogue; // ÇöÀç ´ëÈ­
-    private int index; // ´ÙÀÌ¾ó·Î±× ³» ´ëÈ­ ÀÎµ¦½º
+    private Dialogue dialogue; // í˜„ì¬ ëŒ€í™”
+    private int index; // ë‹¤ì´ì–¼ë¡œê·¸ ë‚´ ëŒ€í™” ì¸ë±ìŠ¤
     private bool talking = false;
     private bool isChoiceMode = false;
-    private int choiceNum = 0; // ¼±ÅÃÁöÀÇ °¹¼ö
+    private int choiceNum = 0; // ì„ íƒì§€ì˜ ê°¯ìˆ˜
 
     void Start()
     {
@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
 
         VRCanvasHandler.Instance.displayOnObject(dialogueBox, NPCObj, 3.7f);
 
-        //ÆĞ³Î ¶ç¿ì±â + ÃÊ±â, ÀÌ¸§, ´ëÈ­ÅØ½ºÆ® ¹× Ä«¸Ş¶ó ¼³Á¤
+        //íŒ¨ë„ ë„ìš°ê¸° + ì´ˆê¸°, ì´ë¦„, ëŒ€í™”í…ìŠ¤íŠ¸ ë° ì¹´ë©”ë¼ ì„¤ì •
         dialogueBox.SetActive(true);
         NPCName.text = dialogueByObject.NPCName;
         dialogue = dialogueByObject.dialogue;
@@ -120,13 +120,21 @@ public class DialogueManager : MonoBehaviour
 
     public void GetDialogueByChoice(int SelectedNumber)
     {
-        //¼±ÅÃÁöÃ¢ Áö¿ì±â
+        //ì„ íƒì§€ì°½ ì§€ìš°ê¸°
         HiddenChoicePanel();
 
-        //Choice¿¡ ¸Â´Â diagloueº¯¼ö Àç¼³Á¤
+        //Choiceì— ë§ëŠ” diagloueë³€ìˆ˜ ì¬ì„¤ì •
         dialogue = dialogue.ChoiceOptionList[SelectedNumber].dialogue;
         index = 0;
         DialogueText.text = dialogue.DialogueTextList[index];
+
+        if(dialogue.choiceSubject!= "")
+        {
+            displayChoiceBox();
+            isChoiceMode = true;
+            return;
+        }
+
         isChoiceMode = false;
     }
 

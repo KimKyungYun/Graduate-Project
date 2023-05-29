@@ -47180,6 +47180,28 @@ MonoBehaviour:
       \uB4E3\uC790"
   - phaseName: GcodeClear
     miniQuestText: "\uB9B4\uB9AC\uC5D0\uAC8C \uB2E4\uC2DC \uB9D0\uC744 \uAC78\uC790"
+  - phaseName: MeetLuther
+    miniQuestText: "\uC81C\uC77C \uC67C\uCABD \uC7A5\uCE58\uC606\uC5D0 \uC11C\uC788\uB294
+      \uB8E8\uD130\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC5B4\uBCF4\uC790"
+  - phaseName: SteamProcess
+    miniQuestText: "\uC2A4\uD300\uD45C\uBA74 \uD6C4\uCC98\uB9AC \uC791\uC5C5\uC744
+      \uC9C4\uD589\uD55C \uB4A4, \uB8E8\uD130\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC790"
+  - phaseName: MeetDavid
+    miniQuestText: "\uB370\uC774\uBE44\uB4DC\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC5B4\uBCF4\uC790"
+  - phaseName: SecondProcess
+    miniQuestText: "\uD45C\uBA74 \uB3C4\uC0C9 \uC791\uC5C5\uC744 \uC9C4\uD589\uD55C
+      \uB4A4 \uB370\uC774\uBE44\uB4DC\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC790"
+  - phaseName: MeetChulsu
+    miniQuestText: "\uCCA0\uC218\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC5B4\uBCF4\uC790"
+  - phaseName: FinalProcess
+    miniQuestText: "\uC138\uBD80 \uB3C4\uC0C9 \uC791\uC5C5\uC744 \uC644\uB8CC\uD55C
+      \uB4A4, \uCCA0\uC218\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC790"
+  - phaseName: BeforeMerge
+    miniQuestText: "\uC5F0\uAD6C\uC18C\uC7A5 \uD3F4\uC5D0\uAC8C  \uB9D0\uC744 \uAC78\uC5B4
+      \uC774\uD6C4 \uC791\uC5C5\uC5D0 \uB300\uD55C \uC124\uBA85\uC744 \uB4E3\uC790"
+  - phaseName: MergeEngine
+    miniQuestText: "\uC5D4\uC9C4 \uBAA8\uD615\uC744 \uC644\uC131\uC2DC\uD0A8 \uD6C4
+      \uD3F4\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC790"
 --- !u!4 &1854092556
 Transform:
   m_ObjectHideFlags: 0
