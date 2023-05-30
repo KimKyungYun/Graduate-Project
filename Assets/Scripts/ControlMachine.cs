@@ -19,9 +19,8 @@ public class ControlMachine : MonoBehaviour
         else
         {
             presentMachine.GetComponent<CartesianXYZ>().enabled = true;
-            presentMachine.GetComponent<Fade>().visible= true;
-
         }
+            presentMachine.GetComponent<Fade>().visible= true;
 
         gameObject.transform.position=new Vector3(1000.0f,1000.0f,1000.0f);
     }

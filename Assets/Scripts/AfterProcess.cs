@@ -22,16 +22,31 @@ public class AfterProcess : MonoBehaviour
             target.GetComponent<Renderer>().material=target_material;
             BlockOpen();
             Invoke("FreeOpen", delay_time);
+            GameManager.Instance.setGamePhase("SteamProcess");
         }
     }
 // &&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"
-    public void ChangeMaterial(SelectEnterEventArgs args){
+    public void SecondProcess(SelectEnterEventArgs args){
         if(door.transform.position.y<0.5f){
             gameObject.GetComponents<AudioSource>()[0].Play();
             gameObject.GetComponents<AudioSource>()[1].Play();
             target.GetComponent<Renderer>().material=target_material;
             BlockOpen();
             Invoke("FreeOpen", delay_time);
+            GameManager.Instance.setGamePhase("SecondProcess");
+
+        }
+
+    }
+    public void ThirdProcess(SelectEnterEventArgs args){
+        if(door.transform.position.y<0.5f){
+            gameObject.GetComponents<AudioSource>()[0].Play();
+            gameObject.GetComponents<AudioSource>()[1].Play();
+            target.GetComponent<Renderer>().material=target_material;
+            BlockOpen();
+            Invoke("FreeOpen", delay_time);
+            GameManager.Instance.setGamePhase("FinalProcess");
+
         }
 
     }
