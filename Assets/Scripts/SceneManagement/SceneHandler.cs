@@ -25,6 +25,7 @@ public class SceneHandler : MonoBehaviour
     private void Awake()
     {
         makeSingleTon();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     void Start()
     {
@@ -66,9 +67,9 @@ public class SceneHandler : MonoBehaviour
         Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
         XRPlayer.transform.position = respwanPosition;
         StartCoroutine(fade(1, 0, fadeTime));
-        yield return new WaitForSeconds(0.3f);
-        //컨트롤러 활성화
+
         ActivateController(true);
+        yield return new WaitForSeconds(0.3f);
         SceneLoading = false;
 
         yield return new WaitForSeconds(5.0f);
@@ -82,15 +83,15 @@ public class SceneHandler : MonoBehaviour
 
     private IEnumerator _SwitchGcodeToScifi()
     {
-        yield return new WaitForSeconds(5.0f);
-        SceneManager.LoadScene("sci-fi");
-
-        yield return new WaitForSeconds(1.0f);
-        ActivateController(true);
-
         Vector3 originalPos = posBeforeSceneLoad;
         Vector3 respawnPos = new Vector3(originalPos.x, originalPos.y + 0.5f, originalPos.z);
         XRPlayer.transform.position = respawnPos;
+
+        yield return new WaitForSeconds(5.0f);
+        SceneManager.LoadScene("sci-fi");
+        yield return new WaitForSeconds(1.0f);
+
+
     }
 
     public void switchScifiToGcode(Vector3 originalPos)
@@ -119,15 +120,19 @@ public class SceneHandler : MonoBehaviour
     }
     public void ActivateController(bool status)
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<DeviceBasedContinuousMoveProvider>().enabled = status;
-        player.GetComponent<DeviceBasedSnapTurnProvider>().enabled = status;
+        XRPlayer.GetComponent<DeviceBasedContinuousMoveProvider>().enabled = status;
+        XRPlayer.GetComponent<DeviceBasedSnapTurnProvider>().enabled = status;
 
         GameObject[] xRController = GameObject.FindGameObjectsWithTag("GameController");
         foreach (GameObject gameObject in xRController)
         {
             gameObject.GetComponent<XRController>().enabled = status;
         }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ActivateController(true);
     }
     private void makeSingleTon()
     {

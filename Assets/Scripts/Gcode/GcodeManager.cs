@@ -107,7 +107,8 @@ public class GcodeManager : MonoBehaviour
         else // 틀렷다는 사운드 + HP바 깎이게
         {
             ProgressBarCircle progressBar = FindObjectOfType<ProgressBarCircle>();
-            
+            soundManager.playWrongAnswerSound();
+
             if (progressBar.UpdateValue(-1) == 0) // progressBar의 Health가 0일때
             {
                 effectManager.showFail();
@@ -119,7 +120,6 @@ public class GcodeManager : MonoBehaviour
                 SceneHandler.Instance.SwitchGcodeToScifi();
             }
 
-            soundManager.playWrongAnswerSound();
         }
     }
 
