@@ -14,12 +14,13 @@ public class SceneHandler : MonoBehaviour
 
     public GameObject XRPlayer;
     public GameObject fadeBox;
-    
+
     [Range(0.01f, 10f)]
     public float fadeTime;
 
     private Image image;
     private bool SceneLoading = false;
+    private Vector3 posBeforeSceneLoad;
 
     private void Awake()
     {
@@ -59,10 +60,10 @@ public class SceneHandler : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         //기존 리스폰 위치 위치 
-        Vector3 respwanPosition = new Vector3(-10.4f, 1.4f, -15f);
+        //Vector3 respwanPosition = new Vector3(-10.4f, 1.284f, -15f
 
         //디버깅용 리스폰
-        // Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
+        Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
         XRPlayer.transform.position = respwanPosition;
         StartCoroutine(fade(1, 0, fadeTime));
         yield return new WaitForSeconds(0.3f);
@@ -83,12 +84,23 @@ public class SceneHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         SceneManager.LoadScene("sci-fi");
-        Vector3 originalPos = XRPlayer.transform.position;
-        Vector3 respawnPos = new Vector3(originalPos.x, originalPos.y + 1f, originalPos.z);
+
+        yield return new WaitForSeconds(1.0f);
+        ActivateController(true);
+
+        Vector3 originalPos = posBeforeSceneLoad;
+        Vector3 respawnPos = new Vector3(originalPos.x, originalPos.y + 0.5f, originalPos.z);
         XRPlayer.transform.position = respawnPos;
     }
 
-    private IEnumerator fade(float start, float end, float fadeTime)
+    public void switchScifiToGcode(Vector3 originalPos)
+    {
+        posBeforeSceneLoad = originalPos;
+        ActivateController(false);
+        SceneManager.LoadScene("MyGcode");
+    }
+
+    private IEnumerator fade(float start, float end, float fadTeime)
     {
         float currentTime = 0.0f;
         float percent = 0.0f;
@@ -105,7 +117,6 @@ public class SceneHandler : MonoBehaviour
             yield return null;
         }
     }
-
     public void ActivateController(bool status)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");

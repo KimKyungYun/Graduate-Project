@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.SceneManagement;
 
 public class MoveGcode : MonoBehaviour
-{   
+{
     public GameObject printerFilament;
 
     public void GOGO(SelectEnterEventArgs args){
@@ -16,6 +16,8 @@ public class MoveGcode : MonoBehaviour
         {
             SavedInfo.Instance.setUsedFilamentBeforeGcode(filamentClolor);
         }
-        SceneManager.LoadScene("MyGcode");
+
+        Vector3 originalPos = Camera.main.transform.root.position;
+        SceneHandler.Instance.switchScifiToGcode(originalPos);
     }
 }
