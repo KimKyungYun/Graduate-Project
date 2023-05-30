@@ -16,6 +16,8 @@ public class MoveGcode : MonoBehaviour
         {
             SavedInfo.Instance.setUsedFilamentBeforeGcode(filamentClolor);
         }
-        SceneManager.LoadScene("MyGcode");
+
+        Vector3 originalPos = Camera.main.transform.root.position;
+        SceneHandler.Instance.switchScifiToGcode(originalPos);
     }
 }

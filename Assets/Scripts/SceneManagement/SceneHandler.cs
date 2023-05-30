@@ -20,6 +20,7 @@ public class SceneHandler : MonoBehaviour
 
     private Image image;
     private bool SceneLoading = false;
+    private Vector3 posBeforeSceneLoad;
 
     private void Awake()
     {
@@ -83,12 +84,23 @@ public class SceneHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         SceneManager.LoadScene("sci-fi");
-        Vector3 originalPos = XRPlayer.transform.position;
+
+        yield return new WaitForSeconds(1.0f);
+        ActivateController(true);
+
+        Vector3 originalPos = posBeforeSceneLoad;
         Vector3 respawnPos = new Vector3(originalPos.x, originalPos.y + 0.5f, originalPos.z);
         XRPlayer.transform.position = respawnPos;
     }
 
-    private IEnumerator fade(float start, float end, float fadeTime)
+    public void switchScifiToGcode(Vector3 originalPos)
+    {
+        posBeforeSceneLoad = originalPos;
+        ActivateController(false);
+        SceneManager.LoadScene("MyGcode");
+    }
+
+    private IEnumerator fade(float start, float end, float fadTeime)
     {
         float currentTime = 0.0f;
         float percent = 0.0f;
@@ -105,7 +117,6 @@ public class SceneHandler : MonoBehaviour
             yield return null;
         }
     }
-
     public void ActivateController(bool status)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
