@@ -3979,7 +3979,9 @@ MonoBehaviour:
           dialogue:
             DialogueTextList:
             - "\uBB50..\uBB50\uB77C\uACE0?"
-            changePhase: 
+            - "\uC790\uB128 \uC774\uC81C \uD68C\uC0AC\uC5D0 \uCD9C\uADFC\uD558\uC9C0
+              \uB9D0\uAC8C."
+            changePhase: SuddenEnd
             choiceSubject: 
             ChoiceOptionList: []
         - ChoiceText: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4. \uC5B4\uB5BB\uAC8C\uB4E0 \uB9CC\uB4E4\uC5B4
@@ -6583,6 +6585,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 421470, guid: 1618249c1c33246ddbfee2bbdb5e36bf, type: 3}
   m_PrefabInstance: {fileID: 257239626}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &258191658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258191660}
+  - component: {fileID: 258191659}
+  m_Layer: 0
+  m_Name: SuddenEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &258191659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258191658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dbaff9d88deef49803496b88c46952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &258191660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258191658}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.296073, y: 1.8359983, z: -3.4546535}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &259578248
 GameObject:
   m_ObjectHideFlags: 0
@@ -47131,6 +47177,9 @@ MonoBehaviour:
       \uD3F4\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC790"
   - phaseName: TheEnd
     miniQuestText: "\uCD95\uD558\uD569\uB2C8\uB2E4! \uCCB4\uD5D8\uC744 \uC644\uB8CC\uD558\uC600\uC2B5\uB2C8\uB2E4."
+  - phaseName: SuddenEnd
+    miniQuestText: "\uD68C\uC0AC\uC5D0\uC11C \uC9E4\uB838\uC2B5\uB2C8\uB2E4.\n\uB2E4\uC2DC
+      \uC2DC\uC791\uD574\uC8FC\uC138\uC694."
 --- !u!4 &1854092556
 Transform:
   m_ObjectHideFlags: 0
