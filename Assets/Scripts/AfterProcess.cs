@@ -17,54 +17,65 @@ public class AfterProcess : MonoBehaviour
 // &&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"
     public void FirstProcess(SelectEnterEventArgs args){
 
+        if(GameManager.Instance.getPresentGamePhaseName().Equals("MeetLuther"))
+        {
+            if (door.transform.position.y < 0.5f)
+            {
 
-        if(door.transform.position.y<0.5f){
-
-            GameObject target = identifyTarget();
+                GameObject target = identifyTarget();
 
 
-            gameObject.GetComponents<AudioSource>()[0].Play();
-            gameObject.GetComponents<AudioSource>()[1].Play();
-            target_material.SetColor("_Color",target.GetComponent<Renderer>().material.color);
-            target.GetComponent<Renderer>().material=target_material;
-            BlockOpen();
-            Invoke("FreeOpen", delay_time);
-            GameManager.Instance.setGamePhase("SteamProcess");
+                gameObject.GetComponents<AudioSource>()[0].Play();
+                gameObject.GetComponents<AudioSource>()[1].Play();
+                target_material.SetColor("_Color", target.GetComponent<Renderer>().material.color);
+                target.GetComponent<Renderer>().material = target_material;
+                BlockOpen();
+                Invoke("FreeOpen", delay_time);
+                GameManager.Instance.setGamePhase("SteamProcess");
+            }
         }
     }
 // &&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"
     public void SecondProcess(SelectEnterEventArgs args){
-        if(door.transform.position.y<0.5f){
 
-            GameObject target = identifyTarget();
+        if(GameManager.Instance.getPresentGamePhaseName().Equals("MeetDavid"))
+        {
+            if (door.transform.position.y < 0.5f)
+            {
 
-            gameObject.GetComponents<AudioSource>()[0].Play();
-            gameObject.GetComponents<AudioSource>()[1].Play();
-            target.GetComponent<Renderer>().material=target_material;
-            BlockOpen();
-            Invoke("FreeOpen", delay_time);
+                GameObject target = identifyTarget();
 
-            //save ColorInfo
-            SavedGameInfo.Instance.SelectedColorType = (ColorType)Enum.Parse(typeof(ColorType), target_material.name);
+                gameObject.GetComponents<AudioSource>()[0].Play();
+                gameObject.GetComponents<AudioSource>()[1].Play();
+                target.GetComponent<Renderer>().material = target_material;
+                BlockOpen();
+                Invoke("FreeOpen", delay_time);
 
-            GameManager.Instance.setGamePhase("SecondProcess");
+                //save ColorInfo
+                SavedGameInfo.Instance.SelectedColorType = (ColorType)Enum.Parse(typeof(ColorType), target_material.name);
 
+                GameManager.Instance.setGamePhase("SecondProcess");
+
+            }
         }
-
     }
     public void ThirdProcess(SelectEnterEventArgs args){
-        if(door.transform.position.y<0.5f){
 
-            GameObject target = identifyTarget();
+        if(GameManager.Instance.getPresentGamePhaseName().Equals("MeetChulsu"))
+        {
+            if (door.transform.position.y < 0.5f)
+            {
+
+                GameObject target = identifyTarget();
 
 
-            gameObject.GetComponents<AudioSource>()[0].Play();
-            gameObject.GetComponents<AudioSource>()[1].Play();
-            target.GetComponent<Renderer>().material=target_material;
-            BlockOpen();
-            Invoke("FreeOpen", delay_time);
-            GameManager.Instance.setGamePhase("FinalProcess");
-
+                gameObject.GetComponents<AudioSource>()[0].Play();
+                gameObject.GetComponents<AudioSource>()[1].Play();
+                target.GetComponent<Renderer>().material = target_material;
+                BlockOpen();
+                Invoke("FreeOpen", delay_time);
+                GameManager.Instance.setGamePhase("FinalProcess");
+            }
         }
 
     }

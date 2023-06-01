@@ -34,8 +34,11 @@ public class PutFilament : MonoBehaviour
         {
             if(Vector3.Distance(printingSet.printer_filament.transform.position,transform.position)<=2.0f && !printingSet.isOperation())
             {
-                ChangeColor(printingSet);
-                initFilamentPos();
+                if(GameManager.Instance.getPresentGamePhaseName().Equals("InsertFilament"))
+                {
+                    ChangeColor(printingSet);
+                    initFilamentPos();
+                };
             }
         }
         

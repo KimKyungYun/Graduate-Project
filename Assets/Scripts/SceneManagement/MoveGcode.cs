@@ -11,10 +11,12 @@ public class MoveGcode : MonoBehaviour
     public GameObject cartesianSmallFilament;
 
     public void GOGO(SelectEnterEventArgs args){
-        
-        saveColorProcess();
-        Vector3 originalPos = Camera.main.transform.root.position;
-        SceneHandler.Instance.switchScifiToGcode(originalPos);
+        if(GameManager.Instance.getPresentGamePhaseName().Equals("GcodeDetail"))
+        {
+            saveColorProcess();
+            Vector3 originalPos = Camera.main.transform.root.position;
+            SceneHandler.Instance.switchScifiToGcode(originalPos);
+        }
     }
 
     private void saveColorProcess()
