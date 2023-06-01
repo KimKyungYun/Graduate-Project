@@ -13,7 +13,7 @@ public class QuestManager : MonoBehaviour
     }
     void Update()
     {
-        VRCanvasHandler.Instance.displayFrontOfPlayer(questBox, 4f, 0, 0);
+        VRCanvasHandler.Instance.displayFrontOfPlayer(questBox, 3.0f, 0, -0.5f);
 
         if ( ControllerInputManager.Instance.SecondaryButtonPressed())
         {

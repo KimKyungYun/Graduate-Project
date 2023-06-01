@@ -23,6 +23,7 @@ public class GcodeManager : MonoBehaviour
     private void Awake()
     {
         makeSingleTon();
+        SavedFilamentColor.Instance.setColorLoaded(false);
     }
 
     private void Start()

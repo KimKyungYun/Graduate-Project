@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using ModularExtrusionsMachines;
+using System;
 
 public class PutFilament : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject printer;
-    public GameObject printer_filament;
-    public GameObject line_top;
-    public GameObject line_bottom;
-    public GameObject print_object;
+    public PrintingSet[] printingSetList;
     private Vector3 firstLocation;
     private Vector3 angle;
 
@@ -23,23 +19,30 @@ public class PutFilament : MonoBehaviour
    
 
     // Update is called once per frame
-    public void ChangeAlpha(){
-        Color oldColor = GetComponent<Renderer>().material.color;        
-        Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, 1);
-        Color objectColor = new Color(oldColor.r, oldColor.g, oldColor.b, 0);
-        printer_filament.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-        line_top.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-        line_bottom.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-        print_object.GetComponent<Renderer>().material.SetColor("_Color", objectColor);
+    public void ChangeColor(PrintingSet printingSet)
+    {
+        Color GrabbedFilamentColor = GetComponent<Renderer>().material.color;        
+        Color printoutColor = new Color(GrabbedFilamentColor.r, GrabbedFilamentColor.g, GrabbedFilamentColor.b, 0);
+
+        printingSet.changeColorExceptPrintout(GrabbedFilamentColor);
+        printingSet.changePrintOutColor(printoutColor);
     }
     
     void Update()
     {
-        if(Vector3.Distance(printer_filament.transform.position, transform.position)<=2.0f&&printer.GetComponent<CartesianXYZ>().enabled == false)
+        foreach(var printingSet in printingSetList)
         {
-            ChangeAlpha();
-            transform.position=firstLocation;
-            transform.eulerAngles=angle;
+            if(Vector3.Distance(printingSet.printer_filament.transform.position,transform.position)<=2.0f && !printingSet.isOperation())
+            {
+                ChangeColor(printingSet);
+                initFilamentPos();
+            }
+        }
+        
+        //Injection 
+       if (SavedFilamentColor.Instance.PrintingSetList == null || SavedFilamentColor.Instance.PrintingSetList[0].printer == null)
+        {
+            SavedFilamentColor.Instance.PrintingSetList = printingSetList;
         }
 
     }
@@ -51,6 +54,55 @@ public class PutFilament : MonoBehaviour
             gameObject.GetComponent<XRGrabInteractable>().enabled=false;
         }
     }
+
+    private void initFilamentPos()
+    {
+        transform.position = firstLocation;
+        transform.eulerAngles = angle;
+    }
+
 }
-//gameobject.SetActive 활성 비활성
+
+
+
+[System.Serializable]
+public class PrintingSet
+{
+    public PrinterType printerType;
+    public GameObject printer;
+    public GameObject printer_filament;
+    public GameObject[] lines;
+    public GameObject print_object;
+
+    public void changeColorExceptPrintout(Color color)
+    {
+        printer_filament.GetComponent<Renderer>().material.SetColor("_Color", color);
+        foreach(GameObject line in lines)
+        {
+            line.GetComponent<Renderer>().material.SetColor("_Color", color);
+
+        }
+    }
+
+    public void changePrintOutColor(Color color)
+    {
+        print_object.GetComponent<Renderer>().material.SetColor("_Color", color);
+    }
+
+    public bool isOperation()
+    {
+        if (printer.GetComponent<CartesianXYZ>() != null)
+        {
+            return printer.GetComponent<CartesianXYZ>().enabled;
+        }
+
+        else if (printer.GetComponent<DeltaXYZ>() != null)
+        {
+            return printer.GetComponent<DeltaXYZ>().enabled;
+        }
+
+        throw new ArgumentException("잘못된 프린터가 인자로 들어왔다.");
+    }
+}
+
 

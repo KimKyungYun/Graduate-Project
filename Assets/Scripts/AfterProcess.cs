@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,10 @@ public class AfterProcess : MonoBehaviour
             target.GetComponent<Renderer>().material=target_material;
             BlockOpen();
             Invoke("FreeOpen", delay_time);
+
+            //save ColorInfo
+            SavedGameInfo.Instance.SelectedColorType = (ColorType)Enum.Parse(typeof(ColorType), target_material.name);
+
             GameManager.Instance.setGamePhase("SecondProcess");
 
         }

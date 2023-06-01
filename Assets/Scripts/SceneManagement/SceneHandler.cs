@@ -25,7 +25,7 @@ public class SceneHandler : MonoBehaviour
     private void Awake()
     {
         makeSingleTon();
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
     void Start()
     {
@@ -91,7 +91,7 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene("sci-fi");
         yield return new WaitForSeconds(1.0f);
 
-
+        ActivateController(true);
     }
 
     public void switchScifiToGcode(Vector3 originalPos)
