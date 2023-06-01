@@ -60,11 +60,11 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene("sci-fi");
         yield return new WaitForSeconds(1.0f);
 
-        //기존 리스폰 위치 위치 
-        //Vector3 respwanPosition = new Vector3(-10.4f, 1.284f, -15f
+        //기존 리스폰 위치 위치
+        Vector3 respwanPosition = new Vector3(-10.4f, 1.284f, -15f);
 
         //디버깅용 리스폰
-        Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
+        //Vector3 respwanPosition = new Vector3(0.32f, -1.078f, -2.58f);
         XRPlayer.transform.position = respwanPosition;
         StartCoroutine(fade(1, 0, fadeTime));
 
