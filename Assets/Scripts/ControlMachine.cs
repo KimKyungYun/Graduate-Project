@@ -21,20 +21,26 @@ public class ControlMachine : MonoBehaviour
         {
             presentMachine.GetComponent<CartesianXYZ>().enabled = true;
         }
-        
-        //if(GameManager.Instance.getPresentGamePhaseName().Equals("GcodeClear"))
-        //{
+
+        if (presentMachine.name.Equals("LaserCutter"))
+        {
+            gameObject.transform.position = new Vector3(1000.0f, 1000.0f, 1000.0f);
+            return;
+        }
+
+        if (GameManager.Instance.getPresentGamePhaseName().Equals("GcodeClear"))
+        {
             presentMachine.GetComponent<Fade>().visible = true;
 
-            
+
             savePrinterType(presentMachine.name);
             saveFilamentType(presentMachine.name);
 
 
 
             GameManager.Instance.setGamePhase("BeforeMeetLuther");
-        //}
-        
+        }
+
         gameObject.transform.position=new Vector3(1000.0f,1000.0f,1000.0f);
     }
 

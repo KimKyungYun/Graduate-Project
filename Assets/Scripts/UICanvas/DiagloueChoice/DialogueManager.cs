@@ -64,7 +64,7 @@ public class DialogueManager : MonoBehaviour
         DialogueText.text = dialogue.DialogueTextList[0];
 
        
-        if (dialogue.DialogueTextList.Length == 1 && dialogue.choiceSubject != "")
+        if (dialogue.DialogueTextList.Count == 1 && dialogue.choiceSubject != "")
         {
             VRCanvasHandler.Instance.displayOnObject(choiceBox, NPCObj, 3.7f);
             displayChoiceBox();
@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour
     public void UpdateDialogueText()
     {
         index++;
-        int dialogueLength = dialogue.DialogueTextList.Length;
+        int dialogueLength = dialogue.DialogueTextList.Count;
 
         if (index == dialogueLength - 1 && dialogue.choiceSubject != "")
         {
@@ -131,7 +131,7 @@ public class DialogueManager : MonoBehaviour
         index = 0;
         DialogueText.text = dialogue.DialogueTextList[index];
 
-        if(dialogue.choiceSubject!= "" && dialogue.DialogueTextList.Length == 1)
+        if(dialogue.choiceSubject!= "" && dialogue.DialogueTextList.Count == 1)
         {
             displayChoiceBox();
             isChoiceMode = true;

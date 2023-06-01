@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.Instance.getPresentGamePhaseName()=="TheEnd"){
+        if(GameManager.Instance.getPresentGamePhaseName()=="TheEnd" ||  GameManager.Instance.getPresentGamePhaseName().Equals("BadEnding")){
             Invoke("GoBack",5);
             Invoke("deactiveCanvas", 4.5f);
         }

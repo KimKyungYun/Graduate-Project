@@ -28,19 +28,15 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.L))
         {
-            setGamePhase("MergeEngine");
+            setGamePhase("BadEndingFeedback");
         }
 
-        if(presentGamePhase.Equals("EndingBridge"))
+        Debug.Log(presentGamePhase.phaseName);
+        if(presentGamePhase.phaseName.Equals("EndingBridge"))
         {
-            if ( SavedGameInfo.Instance.SelectedPrinterType == PrinterType.CartesianBig )
+            Debug.Log("EndingBridge진입");
+            if ( SavedGameInfo.Instance.SelectedPrinterType != PrinterType.CartesianBig )
             {
-                MergeTarget[] mergeTargets = GetComponents<MergeTarget>();
-                foreach (MergeTarget mergeTarget in mergeTargets)
-                {
-                    mergeTarget.enabled = false;
-                }
-
                 setGamePhase("BeforeBadEnding");
             }
 

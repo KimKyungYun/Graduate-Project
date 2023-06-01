@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class AfterProcess : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject target;
+    public GameObject[] targets;
     public Material target_material;
     public GameObject door;
     public GameObject door_button;
@@ -16,7 +16,13 @@ public class AfterProcess : MonoBehaviour
 
 // &&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"
     public void FirstProcess(SelectEnterEventArgs args){
+
+
         if(door.transform.position.y<0.5f){
+
+            GameObject target = identifyTarget();
+
+
             gameObject.GetComponents<AudioSource>()[0].Play();
             gameObject.GetComponents<AudioSource>()[1].Play();
             target_material.SetColor("_Color",target.GetComponent<Renderer>().material.color);
@@ -29,6 +35,9 @@ public class AfterProcess : MonoBehaviour
 // &&GameManager.Instance.getPresentGamePhaseName()=="AfterProcess"
     public void SecondProcess(SelectEnterEventArgs args){
         if(door.transform.position.y<0.5f){
+
+            GameObject target = identifyTarget();
+
             gameObject.GetComponents<AudioSource>()[0].Play();
             gameObject.GetComponents<AudioSource>()[1].Play();
             target.GetComponent<Renderer>().material=target_material;
@@ -45,6 +54,10 @@ public class AfterProcess : MonoBehaviour
     }
     public void ThirdProcess(SelectEnterEventArgs args){
         if(door.transform.position.y<0.5f){
+
+            GameObject target = identifyTarget();
+
+
             gameObject.GetComponents<AudioSource>()[0].Play();
             gameObject.GetComponents<AudioSource>()[1].Play();
             target.GetComponent<Renderer>().material=target_material;
@@ -63,5 +76,18 @@ public class AfterProcess : MonoBehaviour
     public void FreeOpen(){
         onProgress=false;
         door_button.GetComponent<MoveGlass>().enabled=true;
+    }
+
+    private GameObject identifyTarget()
+    {
+        foreach(GameObject target in targets)
+        {
+            if (Vector3.Distance(transform.position, target.transform.position) <= 4.0f)
+            {
+                return target;
+            }
+        }
+
+        throw new ArgumentException("근처에 Target이 없습니다.");
     }
 }
