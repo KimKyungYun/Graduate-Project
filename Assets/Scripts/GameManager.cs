@@ -36,10 +36,8 @@ public class GameManager : MonoBehaviour
             setGamePhase("BeforeMerge");
         }
 
-        Debug.Log(presentGamePhase.phaseName);
         if(presentGamePhase.phaseName.Equals("EndingBridge"))
         {
-            Debug.Log("EndingBridge진입");
             if ( SavedGameInfo.Instance.SelectedPrinterType != PrinterType.CartesianBig )
             {
                 setGamePhase("BeforeBadEnding");

@@ -15,14 +15,6 @@ public class SavedGameInfo : MonoBehaviour
     {
         makeSingleTon();
     }
-    private void Update()
-    {
-        Debug.Log(selectedPrinterType);
-        Debug.Log(selectedFilamentType);
-        Debug.Log(selectedColorType);
-    }
-
-
 
     public PrinterType SelectedPrinterType { get => selectedPrinterType; set => selectedPrinterType = value; }
     public FilamentType SelectedFilamentType { get => selectedFilamentType; set => selectedFilamentType = value; }

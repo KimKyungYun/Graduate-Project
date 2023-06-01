@@ -35,20 +35,17 @@ public class SceneHandler : MonoBehaviour
 
     private void Update()
     {
-        if ( Input.GetKeyDown(KeyCode.M) )
-        {
-            SwitchSceneToScifi();
-        }
-
-
         if (SceneLoading)
         {
             VRCanvasHandler.Instance.displayFrontOfPlayer(fadeBox, 0.5f);
         }
     }
     public void SwitchSceneToScifi()
-    {
-        StartCoroutine(_SwitchSceneToScifi());
+    {   
+        if(GameManager.Instance.getPresentGamePhaseName().Equals("FirstMeetPaul")){
+            StartCoroutine(_SwitchSceneToScifi());
+
+        }
     }
     public IEnumerator _SwitchSceneToScifi()
     {
