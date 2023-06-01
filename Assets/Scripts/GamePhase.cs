@@ -6,5 +6,7 @@ using UnityEngine;
 public class GamePhase
 {
     public string phaseName;
+
+    [TextArea(2, 2)]
     public string miniQuestText;
 }

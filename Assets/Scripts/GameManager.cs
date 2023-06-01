@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
             setGamePhase("BadEndingFeedback");
         }
 
+        if(Input.GetKeyDown(KeyCode.G)) 
+        {
+            setGamePhase("BeforeMerge");
+        }
+
         Debug.Log(presentGamePhase.phaseName);
         if(presentGamePhase.phaseName.Equals("EndingBridge"))
         {
@@ -42,6 +47,7 @@ public class GameManager : MonoBehaviour
 
             else
             {
+
                 setGamePhase("MergeEngine");
             }
         }
