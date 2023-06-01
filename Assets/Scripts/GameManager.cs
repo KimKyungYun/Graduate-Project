@@ -30,6 +30,25 @@ public class GameManager : MonoBehaviour
         {
             setGamePhase("MergeEngine");
         }
+
+        if(presentGamePhase.Equals("EndingBridge"))
+        {
+            if ( SavedGameInfo.Instance.SelectedPrinterType == PrinterType.CartesianBig )
+            {
+                MergeTarget[] mergeTargets = GetComponents<MergeTarget>();
+                foreach (MergeTarget mergeTarget in mergeTargets)
+                {
+                    mergeTarget.enabled = false;
+                }
+
+                setGamePhase("BeforeBadEnding");
+            }
+
+            else
+            {
+                setGamePhase("MergeEngine");
+            }
+        }
     }
 
     public GamePhase getPresentGamePhase()
